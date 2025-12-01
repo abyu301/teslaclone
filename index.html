@@ -10,20 +10,50 @@
 
   <!-- Header / Navbar -->
   <header class="flex justify-between items-center px-9 py-4 bg-white shadow-md">
+  <!-- Left: Logo -->
   <div>
     <img src="./public/img/tesla-logo1.png" alt="Tesla Logo" class="h-6 w-auto">
   </div>
 
-  <nav class="hidden md:flex space-x-6">
-    <a href="#" class="text-gray-800 hover:text-gray-500">Model S</a>
-    <a href="#" class="text-gray-800 hover:text-gray-500">Model 3</a>
-    <a href="#" class="text-gray-800 hover:text-gray-500">Model X</a>
-    <a href="#" class="text-gray-800 hover:text-gray-500">Model Y</a>
+  <!-- Center: Main navigation (desktop) -->
+  <nav class="hidden xl:flex space-x-6">
+    <a href="#" class="text-gray-800 hover:text-gray-500">Vehicle</a>
+    <a href="#" class="text-gray-800 hover:text-gray-500">Energy</a>
+    <a href="#" class="text-gray-800 hover:text-gray-500">Charging</a>
+    <a href="#" class="text-gray-800 hover:text-gray-500">Discover</a>
+    <a href="#" class="text-gray-800 hover:text-gray-500">Shop</a>
+  </nav>
+
+  <!-- Right: Account / Region / Support (desktop) -->
+  <nav class="hidden xl:flex space-x-6">
+    <a href="#" class="text-gray-800 hover:text-gray-500">Tesla Account</a>
+    <a href="#" class="text-gray-800 hover:text-gray-500">Region</a>
+    <a href="#" class="text-gray-800 hover:text-gray-500">Support</a>
   </nav>
 
   <!-- Mobile menu button -->
-  <button id="menu-btn" class="md:hidden text-gray-800">Menu</button>
+  <button id="menu-btn" class="xl:hidden text-gray-800">Menu</button>
 </header>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 bg-white z-50 hidden flex flex-col items-center justify-center space-y-6">
+  <!-- Close button -->
+  <button id="menu-close" class="absolute top-6 right-6 text-gray-800 text-3xl">✕</button>
+
+  <!-- Mobile nav links -->
+  <nav class="flex flex-col items-center space-y-6 text-xl">
+    <a href="#">Vehicle</a>
+    <a href="#">Energy</a>
+    <a href="#">Charging</a>
+    <a href="#">Discover</a>
+    <a href="#">Shop</a>
+    <a href="#">Tesla Account</a>
+    <a href="#">Region</a>
+    <a href="#">Support</a>
+  </nav>
+</div>
+
+
 
 
   
