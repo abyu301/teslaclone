@@ -8,119 +8,97 @@
 </head>
 <body class="bg-gray-50">
 
-    <!-- Header / Navbar -->
-    <header class="flex justify-between items-center px-9 py-4 bg-white shadow-md">
-      <!-- Left: Logo + Main nav -->
-      <div class="flex items-center space-x-8">
-        <img src="./public/img/tesla-logo1.png" alt="Tesla Logo" class="h-6 w-auto">
+  <!-- Header / Navbar -->
+  <header class="flex justify-between items-center px-9 py-4 bg-white shadow-md">
+    <div class="flex items-center space-x-8">
+      <img src="./public/img/tesla-logo1.png" alt="Tesla Logo" class="h-6 w-auto">
 
-        <!-- Main navigation (desktop) -->
-        <nav class="hidden xl:flex space-x-6">
-          <a href="#" class="text-gray-800 hover:text-gray-500">Vehicle</a>
-          <a href="#" class="text-gray-800 hover:text-gray-500">Energy</a>
-          <a href="#" class="text-gray-800 hover:text-gray-500">Charging</a>
-          <a href="#" class="text-gray-800 hover:text-gray-500">Discover</a>
-          <a href="#" class="text-gray-800 hover:text-gray-500">Shop</a>
-        </nav>
-      </div>
-
-      <!-- Right: Account / Region / Support (desktop) -->
-      <div class="hidden xl:flex items-center space-x-6">
-        <a href="#" class="flex items-center gap-1 text-gray-800 hover:text-gray-500">
-          <img src="./public/icons/account.svg" alt="Account" class="h-5 w-5">Tesla Account
-        </a>
-        <a href="#" class="flex items-center gap-1 text-gray-800 hover:text-gray-500">
-          <img src="./public/icons/region.svg" alt="Region" class="h-5 w-5">Region
-        </a>
-        <a href="#" class="flex items-center gap-1 text-gray-800 hover:text-gray-500">
-          <img src="./public/icons/support.svg" alt="Support" class="h-5 w-5">Support
-        </a>
-      </div>
-
-      <!-- Mobile menu button -->
-      <button id="menu-btn" class="xl:hidden text-gray-800">Menu</button>
-    </header>
-
-    <!-- Mobile Menu Overlay -->
-    <div
-  id="mobile-menu"
-  class="fixed inset-0 bg-white z-50 hidden flex flex-col items-start px-6 space-y-6 pt-28">
-      <!-- Close button -->
-      <button id="menu-close" class="absolute top-6 right-6 text-gray-800 text-3xl">✕</button>
-
-      <!-- Mobile nav links -->
-      <nav class="flex flex-col space-y-11 text-xl font-bold  w-full">
-        <a href="#" class="hover:text-gray-500">Vehicle</a>
-        <a href="#" class="hover:text-gray-500">Energy</a>
-        <a href="#" class="hover:text-gray-500">Charging</a>
-        <a href="#" class="hover:text-gray-500">Discover</a>
-        <a href="#" class="hover:text-gray-500">Shop</a>
-        <a href="#" class="hover:text-gray-500">Support</a>
-        <a href="#" class="flex items-center gap-2 hover:text-gray-500">
-          <img src="./public/img/icons/glob.svg" alt="Region" class="h-5 w-5">Region
-        </a>
-        <a href="#" class="flex items-center gap-2 hover:text-gray-500">
-          <img src="./public/img/icons/account.svg" alt="Account" class="h-5 w-5">Account
-        </a>
+      <nav class="hidden xl:flex space-x-6">
+        <a href="#" class="text-gray-800 hover:text-gray-500">Vehicle</a>
+        <a href="#" class="text-gray-800 hover:text-gray-500">Energy</a>
+        <a href="#" class="text-gray-800 hover:text-gray-500">Charging</a>
+        <a href="#" class="text-gray-800 hover:text-gray-500">Discover</a>
+        <a href="#" class="text-gray-800 hover:text-gray-500">Shop</a>
       </nav>
     </div>
 
-<!-- 
-  ********************hero banner**************** -->
-<section class="relative overflow-hidden">
-
-  <!-- Slider Wrapper -->
-  <div id="slider" class="relative h-[73vh] w-full">
-
-    <!-- Slide 1 -->
-    <div class="slide absolute inset-0 bg-cover bg-center flex flex-col justify-between text-center opacity-100 transition-opacity duration-700"
-      style="background-image: url('./public/img/hero/Homepage-Promo-Cybertruck-Desktop-US-v2.avif')">
-      <div class="pt-28">
-        <h1 class="text-5xl font-semibold text-white">Cybertruck</h1>
-        <p class="text-lg text-white mt-2">Lease From $729/mo</p>
-      </div>
+    <div class="hidden xl:flex items-center space-x-6">
+      <a href="#" class="flex items-center gap-1 text-gray-800 hover:text-gray-500">
+        <img src="./public/img/icons/account.svg" class="h-5 w-5"> Tesla Account
+      </a>
+      <a href="#" class="flex items-center gap-1 text-gray-800 hover:text-gray-500">
+        <img src="./public/img/icons/glob.svg" class="h-5 w-5"> Region
+      </a>
+      <a href="#" class="flex items-center gap-1 text-gray-800 hover:text-gray-500">
+        <img src="./public/img/icons/support.svg" class="h-5 w-5"> Support
+      </a>
     </div>
 
-    <!-- Slide 2 -->
-    <div class="slide absolute inset-0 bg-cover bg-center flex flex-col justify-between text-center opacity-0 transition-opacity duration-700"
-      style="background-image: url('./public/img/hero/Homepage-Promo-Meet-Model-Y-Desktop\ \(1\).avif')">
-      <div class="pt-28">
-        <h1 class="text-5xl font-semibold text-white">Model Y</h1>
-      </div>
-    </div>
+    <button id="menu-btn" class="xl:hidden text-gray-800">Menu</button>
+  </header>
 
-    <!-- Slide 3 -->
-    <div class="slide absolute inset-0 bg-cover bg-center flex flex-col justify-between text-center opacity-0 transition-opacity duration-700"
-      style="background-image: url('./public/img/hero/Homepage-Promo-Meet-Model-3-Desktop.avif')">
-      <div class="pt-28">
-        <h1 class="text-5xl font-semibold text-white">Model 3</h1>
-      </div>
-    </div>
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu"
+    class="fixed inset-0 bg-white z-50 hidden flex flex-col items-start px-6 space-y-6 pt-28">
 
+    <button id="menu-close" class="absolute top-6 right-6 text-gray-800 text-3xl">✕</button>
+
+    <nav class="flex flex-col space-y-11 text-xl font-bold w-full">
+      <a class="hover:text-gray-500">Vehicle</a>
+      <a class="hover:text-gray-500">Energy</a>
+      <a class="hover:text-gray-500">Charging</a>
+      <a class="hover:text-gray-500">Discover</a>
+      <a class="hover:text-gray-500">Shop</a>
+      <a class="hover:text-gray-500">Support</a>
+
+      <a class="flex items-center gap-2 hover:text-gray-500">
+        <img src="./public/img/icons/glob.svg" class="h-5 w-5"> Region
+      </a>
+      <a class="flex items-center gap-2 hover:text-gray-500">
+        <img src="./public/img/icons/account.svg" class="h-5 w-5"> Account
+      </a>
+    </nav>
   </div>
 
-</section>
+  <!-- ************************** Hero Slider *************************** -->
+  <section class="relative overflow-hidden">
+    <div id="slider" class="relative h-[73vh] w-full">
 
+      <!-- Slide 1 -->
+      <div class="slide absolute inset-0 bg-cover bg-center opacity-100 transition-opacity duration-700"
+        style="background-image: url('./public/img/hero/Homepage-Promo-Cybertruck-Desktop-US-v2.avif')">
+        <div class="pt-28 text-center">
+          <h1 class="text-5xl font-semibold text-white">Cybertruck</h1>
+          <p class="text-lg text-white mt-2">Lease From $729/mo</p>
+        </div>
+      </div>
 
+      <!-- Slide 2 -->
+      <div class="slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-700"
+        style="background-image: url('./public/img/hero/Homepage-Promo-Meet-Model-Y-Desktop (1).avif')">
+        <div class="pt-28 text-center">
+          <h1 class="text-5xl font-semibold text-white">Model Y</h1>
+        </div>
+      </div>
 
+      <!-- Slide 3 -->
+      <div class="slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-700"
+        style="background-image: url('./public/img/hero/Homepage-Promo-Meet-Model-3-Desktop.avif')">
+        <div class="pt-28 text-center">
+          <h1 class="text-5xl font-semibold text-white">Model 3</h1>
+        </div>
+      </div>
 
+      <!-- Navigation Arrows -->
+      <button id="prev" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 text-white px-4 py-2 rounded-full">◀</button>
+      <button id="next" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 text-white px-4 py-2 rounded-full">▶</button>
+    </div>
+  </section>
 
-<section>
-  <h1> this is the body</h1>
-   <h1> this is the body</h1>
-    <h1> this is the body</h1>
-</section>
-  
-
-
-
-
-
-
-
-
-  <!-- Main content placeholder -->
-  <main id="main-content"></main>
+  <section>
+    <h1>This is the body</h1>
+    <h1>This is the body</h1>
+  </section>
 
   <script type="module" src="/src/main.js"></script>
 </body>
