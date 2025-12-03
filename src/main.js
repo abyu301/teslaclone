@@ -51,3 +51,29 @@ document.getElementById("prev")?.addEventListener("click", prevSlide);
 
 // Auto-slide
 setInterval(nextSlide, 4000);
+
+
+// Showcase Carousel
+const track = document.getElementById("showcase-track");
+const dots = document.querySelectorAll(".dot");
+let scIndex = 0;
+
+function updateShowcase() {
+  const cardWidth = document.querySelector(".showcase-card").offsetWidth;
+  track.style.transform = `translateX(-${scIndex * cardWidth}px)`;
+
+  dots.forEach((dot, i) => {
+    dot.style.backgroundColor = i === scIndex ? "black" : "gray";
+  });
+}
+
+// Dot click
+dots.forEach((dot, i) => {
+  dot.addEventListener("click", () => {
+    scIndex = i;
+    updateShowcase();
+  });
+});
+
+// Initialize
+updateShowcase();
