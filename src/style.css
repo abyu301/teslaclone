@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.slide {
+  transition: opacity 1s ease-in-out;
+}
