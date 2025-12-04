@@ -1,5 +1,189 @@
 @import "tailwindcss";
 
-.slide {
-  transition: opacity 1s ease-in-out;
+/* Clean, professional stylesheet for the showcase carousel
+   Mobile-first. Breakpoints:
+     - Mobile: < 600px
+     - Tablet: 600px - 1199.98px
+     - Desktop: >= 1200px
+*/
+
+/* ===== Variables (easy tuning) ===== */
+:root{
+  --gap-mobile: 12px;
+  --gap-tablet: 16px;
+  --gap-desktop: 24px;
+
+  --mobile-front-offset: 48px; /* how much narrower the front card is on mobile */
+  --mobile-other-offset: 64px;
+
+  --tablet-active-px: 980px;
+  --tablet-adj-px: 700px;
+  --tablet-normal-px: 520px;
+  --tablet-end-px: 600px;
+}
+
+/* ===== Base / Reset ===== */
+*{box-sizing:border-box}
+body{margin:0}
+
+/* Track */
+#showcase-track{
+  display:flex;
+  gap:var(--gap-mobile);
+  transition: transform 420ms cubic-bezier(.2,.9,.2,1);
+  will-change: transform;
+}
+
+/* Card container */
+.showcase-card{ flex: 0 0 100%; } /* default: full width on very small screens */
+.showcase-card > .relative{
+  position:relative;
+  overflow:hidden;
+  border-radius:12px;
+  height:550px;
+}
+.showcase-card img{ display:block; width:100%; height:100%; object-fit:cover; }
+
+/* Top-left label */
+.top-left{
+  position:absolute;
+  top:16px;
+  left:20px;
+  z-index:40;
+  color:rgba(255,255,255,0.9);
+  font-weight:600;
+  font-size:14px;
+  filter:drop-shadow(0 1px 2px rgba(0,0,0,.45));
+}
+
+/* Gradient + overlay */
+.gradient-overlay, .card-gradient, .gradient{
+  position:absolute; inset:0; pointer-events:none; z-index:30;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 15%, rgba(0,0,0,0.55) 100%);
+}
+.overlay{ position:absolute; inset:0; display:flex; align-items:flex-end; z-index:35; }
+.overlay-inner, .p-6{
+  padding:18px;
+  max-width:62%;
+  color:#fff;
+}
+.overlay-inner h3{
+  margin:0; font-weight:700;
+  font-size:clamp(20px, 4.2vw, 40px);
+  line-height:1.02;
+}
+.overlay-inner p{ margin:.4rem 0; color:rgba(255,255,255,.95); }
+
+/* ===== Semantic size classes (mobile-first) ===== */
+/* Mobile: front card slightly narrower so neighbor slivers show */
+.size-active{ flex:0 0 calc(100% - var(--mobile-front-offset)); }
+.size-adj, .size-normal, .size-end{ flex:0 0 calc(100% - var(--mobile-other-offset)); }
+
+/* Visual states */
+.showcase-card.active{ opacity:1; transform:scale(1.01); z-index:50; transition: transform .28s ease, opacity .28s ease; }
+.showcase-card.adjacent{ opacity:.75; transform:scale(.99); z-index:40; }
+.showcase-card.end-two{ opacity:1; z-index:50; }
+.showcase-card.size-normal:not(.active):not(.adjacent):not(.end-two){ opacity:.36; transform:scale(.96); z-index:10; }
+
+/* ===== CTA / Buttons (semantic .cta-row recommended) ===== */
+/* Use .cta-row on the container that wraps the two CTAs in each card.
+   This avoids depending on combinations of Tailwind utilities. */
+.overlay-inner .cta-row,
+.overlay-inner .btn-row {
+  display:flex;
+  gap:8px;
+  align-items:center;
+  width:100%;
+  flex-wrap:nowrap;
+  flex-direction:row; /* side-by-side by default */
+  min-width:0;
+}
+
+/* Buttons inside CTA row */
+.overlay-inner .cta-row button,
+.overlay-inner .btn-row button,
+.overlay-btn-primary, .overlay-btn-secondary {
+  flex:1 1 0;
+  width:auto;
+  padding:8px 10px;
+  font-size:13px;
+  border-radius:8px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  white-space:nowrap;
+  border:0;
+}
+
+/* Visuals */
+.overlay-btn-primary{ background:#3E6AE1; color:#fff; }
+.overlay-btn-secondary{ background:#fff; color:#000; }
+
+/* ===== Mobile polish (<600px) ===== */
+@media (max-width:599.98px){
+  #showcase-track{ gap:var(--gap-mobile); }
+
+  .overlay-inner, .p-6{ padding:12px; max-width:92%; }
+  .overlay-inner h3{ font-size:clamp(18px, 7.5vw, 26px); line-height:1.02; margin-bottom:6px; }
+  .overlay-inner p{ font-size:clamp(11px, 3.6vw, 14px); margin:4px 0; }
+
+  /* CTAs: side-by-side on most phones (reduced padding) */
+  .overlay-inner .cta-row button{ padding:8px 10px; font-size:13px; }
+  .overlay-inner .cta-row{ gap:8px; flex-wrap:nowrap; }
+
+  /* hide larger arrows on small phones */
+  #showcase-prev, #showcase-next{ display:none; }
+
+  /* label adjustments */
+  .top-left{ top:12px; left:14px; font-size:13px; }
+}
+
+/* stack CTAs only on ultra-narrow phones (<360px) */
+@media (max-width:359.98px){
+  .overlay-inner .cta-row,
+  .overlay-inner .btn-row {
+    flex-direction:column;
+    gap:10px;
+    align-items:stretch;
+  }
+  .overlay-inner .cta-row button{ width:100%; padding:10px 14px; font-size:14px; }
+}
+
+/* ===== Tablet: 600px - 1199.98px =====
+   Use capped / fluid sizes (min( fixedPx, 100% )) so the layout behaves nicely at 600px.
+*/
+@media (min-width:600px) and (max-width:1199.98px){
+  #showcase-track{ gap:var(--gap-tablet); }
+
+  .size-active{ flex:0 0 min(var(--tablet-active-px), 100%); }
+  .size-adj{ flex:0 0 min(var(--tablet-adj-px), 90%); }
+  .size-normal{ flex:0 0 min(var(--tablet-normal-px), 80%); }
+  .size-end{ flex:0 0 min(var(--tablet-end-px), 95%); }
+
+  .overlay-inner, .p-6{ padding:16px; max-width:80%; }
+  .overlay-inner h3{ font-size:clamp(22px, 3.6vw, 36px); }
+
+  .overlay-inner .cta-row button{ padding:9px 14px; font-size:13px; }
+}
+
+/* ===== Desktop >=1200px ===== */
+@media (min-width:1200px){
+  #showcase-track{ gap:var(--gap-desktop); }
+
+  .size-active{ flex:0 0 66%; }
+  .size-adj{ flex:0 0 42%; }
+  .size-normal{ flex:0 0 36%; }
+  .size-end{ flex:0 0 50%; }
+
+  .overlay-inner, .p-6{ padding:24px; max-width:60%; }
+  .overlay-inner h3{ font-size:clamp(28px, 3.6vw, 48px); }
+  .overlay-inner .cta-row button{ padding:12px 22px; font-size:14px; }
+}
+
+/* Arrow helper: fade + disable pointer events while keeping layout */
+#showcase-prev.arrow-hidden, #showcase-next.arrow-hidden{
+  opacity:0;
+  pointer-events:none;
+  transform:translateY(-50%) scale(0.98);
+  transition: opacity 180ms ease, transform 180ms ease;
 }
