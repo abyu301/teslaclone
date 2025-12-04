@@ -187,3 +187,51 @@ body{margin:0}
   transform:translateY(-50%) scale(0.98);
   transition: opacity 180ms ease, transform 180ms ease;
 }
+
+
+
+/* ===== Promo Card Component ===== */
+
+/* Desktop ≥1200px */
+@media (min-width: 1200px) {
+  .promo-card {
+    display: flex;
+    flex-direction: row;
+    height: 228px;
+  }
+  .promo-media {
+    display: block !important;
+    flex: 0 0 35%;
+    height: 100%;
+  }
+  .promo-content {
+    flex: 1;
+    padding: 2rem;
+  }
+}
+
+/* Medium Screens 600–1199px (HIDE IMAGE) */
+@media (min-width: 600px) and (max-width: 1199.98px) {
+  .promo-card {
+    height: 228px;
+  }
+  .promo-media {
+    display: none !important;
+  }
+}
+
+/* Mobile < 600px (SHOW IMAGE + TEXT) */
+@media (max-width: 599.98px) {
+  .promo-card {
+    height: auto; /* allow natural flow */
+    display: flex;
+    flex-direction: column;
+  }
+  .promo-media {
+    display: block !important;
+    height: 228px;
+  }
+  .promo-content {
+    padding: 1rem;
+  }
+}
