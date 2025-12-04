@@ -348,35 +348,40 @@
 <section class="promo-section px-4 md:px-8 lg:px-12 py-10">
   <div class="max-w-7xl mx-auto">
 
-    <!-- Promo grid: two promo cards -->
-    <div class="promo-grid">
+    <!-- Grid: stack on small, side-by-side on larger screens -->
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
 
       <!-- Promo 1 -->
-      <article class="promo-card" aria-labelledby="promo-1-title">
-        <div class="promo-content">
-          <h2 id="promo-1-title" class="promo-title">Current Offers</h2>
-          <p class="promo-copy">Explore limited-time offers on Tesla vehicles.</p>
-          <div class="cta-row" role="group" aria-label="Current offers actions">
-            <button class="promo-btn primary">Learn More</button>
-          </div>
+      <article class="promo-card bg-gray-100 rounded-xl overflow-hidden shadow-sm flex flex-col">
+        <!-- Media first on mobile, moved to right on >=sm -->
+        <div class="promo-media order-1 sm:order-2 w-full h-56 sm:h-auto sm:w-56 flex-shrink-0">
+          <img src="./public/img/Promo-pic/Homepage-Grid-Current-Offers.avif" alt="Cars lineup" class="w-full h-full object-cover">
         </div>
 
-        <div class="promo-media" role="img" aria-hidden="true"
-             style="background-image: url('./public/img/Promo-pic/Homepage-Grid-Current-Offers.avif')"></div>
+        <div class="promo-content order-2 sm:order-1 p-6 sm:p-8 flex flex-col justify-center">
+          <h3 id="promo-1-title" class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">Current Offers</h3>
+          <p class="text-slate-600 mb-4">Explore limited-time offers on Tesla vehicles.</p>
+
+          <div class="cta-row mt-4">
+            <button class="rounded-md bg-white text-slate-900 px-5 py-3 shadow-sm">Learn More</button>
+          </div>
+        </div>
       </article>
 
       <!-- Promo 2 -->
-      <article class="promo-card" aria-labelledby="promo-2-title">
-        <div class="promo-content">
-          <h2 id="promo-2-title" class="promo-title">American Heroes</h2>
-          <p class="promo-copy">$500 off for military, first responders, healthcare, teachers and students.</p>
-          <div class="cta-row" role="group" aria-label="American heroes actions">
-            <button class="promo-btn primary">Learn More</button>
-          </div>
+      <article class="promo-card bg-gray-100 rounded-xl overflow-hidden shadow-sm flex flex-col">
+        <div class="promo-media order-1 sm:order-2 w-full h-56 sm:h-auto sm:w-56 flex-shrink-0">
+          <img src="./public/img/Promo-pic/Homepage-Grid-American-Heroes-v2.avif" alt="Three cars" class="w-full h-full object-cover">
         </div>
 
-        <div class="promo-media" role="img" aria-hidden="true"
-             style="background-image: url('./public/img/Promo-pic/Homepage-Grid-American-Heroes-v2.avif')"></div>
+        <div class="promo-content order-2 sm:order-1 p-6 sm:p-8 flex flex-col justify-center">
+          <h3 id="promo-2-title" class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">American Heroes</h3>
+          <p class="text-slate-600 mb-4">$500 off for military, first responders, healthcare, teachers and students.</p>
+
+          <div class="cta-row mt-4">
+            <button class="rounded-md bg-white text-slate-900 px-5 py-3 shadow-sm">Learn More</button>
+          </div>
+        </div>
       </article>
 
     </div>
