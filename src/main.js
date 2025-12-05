@@ -159,3 +159,18 @@ if (document.readyState === "loading") {
 } else {
   updateShowcase();
 }
+
+// ===== FSD Video Pause/Play Toggle =====
+const video = document.querySelector("video");
+  const toggleBtn = document.getElementById("videoToggle");
+  const icon = document.getElementById("toggleIcon");
+
+  toggleBtn.addEventListener("click", () => {
+    if (video.paused) {
+      video.play();
+      icon.src = "/public/img/icons/puse.svg";   // play → show pause icon
+    } else {
+      video.pause();
+      icon.src = "/public/img/icons/play.svg";   // pause → show play icon
+    }
+  });
