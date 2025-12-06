@@ -308,6 +308,56 @@ initSliderB();
 
 
 
+// ===========================
+// ASK QUESTION INPUT LOGIC
+// ===========================
+
+// Elements
+const questionInput = document.getElementById("questionInput");
+const staticLabel = document.getElementById("staticLabel");
+const arrowBox = document.getElementById("arrowBox");
+
+// Placeholder suggestions that rotate
+const suggestions = [
+  "Would you like to know how I built this UI?",
+  "Need a developer to build something similar?",
+  "Should I add more features to this clone?",
+  "Interested in the tools I used for this clone?"
+];
+
+
+let placeholderIndex = 0;
+
+// Change placeholder every 2 seconds
+setInterval(() => {
+  if (document.activeElement === questionInput) return; // don't rotate while typing
+
+  placeholderIndex = (placeholderIndex + 1) % suggestions.length;
+  questionInput.placeholder = suggestions[placeholderIndex];
+}, 3000);
+
+
+// When input loses focus → show label *if it's empty*
+questionInput.addEventListener("blur", () => {
+  if (questionInput.value.trim() === "") {
+    staticLabel.classList.remove("opacity-0");
+  }
+});
+
+// While typing → turn arrow blue
+questionInput.addEventListener("input", () => {
+  if (questionInput.value.trim() !== "") {
+    arrowBox.classList.remove("bg-gray-100");
+    arrowBox.classList.add("bg-blue-500");
+  } else {
+    arrowBox.classList.remove("bg-blue-500");
+    arrowBox.classList.add("bg-gray-100");
+  }
+});
+
+
+
+
 
 
   

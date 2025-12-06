@@ -237,3 +237,30 @@ body{margin:0}
 }
 
 
+
+/* Blinking cursor effect */
+.blink-cursor::after {
+  content: "|";
+  margin-left: 3px;
+  animation: blink 0.9s infinite;
+  opacity: 1;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Fade animation for rotating questions */
+.fade-text {
+  animation: fade 0.5s ease-in-out;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+
+
