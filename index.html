@@ -80,7 +80,7 @@
 
   <!-- ************************** Hero Slider *************************** -->
   <section class="relative overflow-hidden">
-    <div id="slider" class="relative h-[73vh] w-full">
+    <div id="slider" class="relative h-[80vh] w-full">
 
       <!-- Slide 1 -->
       <div class="slide absolute inset-0 bg-cover bg-center opacity-100 transition-opacity duration-700"
@@ -697,10 +697,18 @@
 
 <!-- ********** Fixed Bottom "Ask a Question" Field ********** -->
 <section class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 z-50">
-  <div class="max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-3 py-3 px-4 shadow-gray-200 shadow-md">
+  <div class="max-w-3xl mx-auto flex items-center justify-between py-3 px-4 gap-3 shadow-gray-200 shadow-md">
 
-    <!-- Ask a Question Field -->
-    <div class="relative w-full md:flex-1">
+    <!-- MOBILE: small message icon -->
+    <button
+      id="mobileMessageBtn"
+      class="md:hidden flex items-center justify-center w-10 h-10 bg-gray-200 rounded-md"
+    >
+      <img src="./public/img/icons/message.svg" class="w-5 h-5" />
+    </button>
+
+    <!-- DESKTOP: full ask question field -->
+    <div class="hidden md:block relative flex-1">
       <input
         id="questionInput"
         type="text"
@@ -708,7 +716,6 @@
         placeholder="Loading suggestions..."
       />
 
-      <!-- Icon + Label (STATIC) -->
       <span
         id="staticLabel"
         class="absolute left-3 top-1/2 -translate-y-1/2 flex items-center gap-2 text-gray-600 font-medium pointer-events-none"
@@ -717,7 +724,6 @@
         <span>Ask Question</span>
       </span>
 
-      <!-- Arrow Icon (BG changes on input) -->
       <span
         id="arrowBox"
         class="absolute right-3 top-1/2 -translate-y-1/2 bg-gray-100 p-1 rounded-md transition"
@@ -726,10 +732,16 @@
       </span>
     </div>
 
-    <!-- Button -->
-    <a
+      <a
       href="#"
-      class="flex items-center gap-2 bg-gray-200 transition px-4 py-2.5 rounded-md cursor-pointer whitespace-nowrap text-sm font-medium"
+      class="
+        flex items-center gap-2 
+        bg-gray-200 px-4 py-2.5 rounded-md cursor-pointer 
+        whitespace-nowrap text-sm font-medium
+        
+        flex-1 md:flex-none        
+        justify-center md:justify-start
+      "
     >
       <img 
         src="./public/img/images (1).png"
@@ -739,8 +751,11 @@
       <span>Schedule a Drive Today</span>
     </a>
 
+
   </div>
 </section>
+
+
 
 
 
