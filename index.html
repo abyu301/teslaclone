@@ -679,10 +679,10 @@
 
   <!-- ********** Fixed Bottom "Ask a Question" Field ********** -->
 <section class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 z-50">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-3 py-3 px-4">
+  <div class="max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-3 py-3 px-4 shadow-gray-200 shadow-md">
 
     <!-- Ask a Question Field -->
-<div class="relative w-full md:flex-1">
+<div class="relative w-md md:flex-2/3">
   <input
     id="questionInput"
     type="text"
@@ -691,16 +691,16 @@
   />
 
   <!-- Icon + Label -->
-  <span class="absolute left-2.5 top-1/2 -translate-y-1/2 flex items-center gap-1 text-gray-600 text-sm font-medium pointer-events-none">
-    <span class="w-4 h-4">
+  <span class="absolute left-2.5 top-1/2 -translate-y-1/2 flex items-center gap-2 text-gray-600 text-shadow-md font-medium pointer-events-none">
+    <span class="w-6 h-6">
       <img src="./public/img/icons/message.svg" class="w-full h-full" alt="">
     </span>
     <span>Ask Question</span>
   </span>
 
   <!-- Arrow Icon -->
-  <span class="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-500 text-base pointer-events-none">
-    ↑
+  <span class="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-500 text-base pointer-events-none bg-gray-50 p-1 rounded-md">
+    <img src="./public/img/icons/arrow-up.svg" class="w-5 h-5" alt="">
   </span>
 </div>
 
