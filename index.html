@@ -8,34 +8,52 @@
 </head>
 <body class="bg-gray-50">
 
-  <!-- Header / Navbar -->
-  <header class="flex justify-between items-center px-9 py-4 bg-white shadow-md">
-    <div class="flex items-center space-x-8">
-      <img src="./public/img/tesla-logo1.png" alt="Tesla Logo" class="h-6 w-auto">
+  <!-- HEADER -->
+<header 
+  class="fixed top-0 left-0 w-full z-50 
+         flex justify-between items-center 
+         px-6 py-4
+         
+         bg-transparent shadow-none       /* mobile default */
+         xl:bg-white xl:shadow-md         /* desktop */
+         
+         transition-all duration-300"
+  id="mainHeader"
+>
+  <!-- LEFT SECTION -->
+  <div class="flex items-center space-x-8">
+    <img src="./public/img/tesla-logo1.png" alt="Tesla Logo" class="h-6 w-auto">
 
-      <nav class="hidden xl:flex space-x-6">
-        <a href="#" class="text-gray-800 hover:text-gray-500">Vehicle</a>
-        <a href="#" class="text-gray-800 hover:text-gray-500">Energy</a>
-        <a href="#" class="text-gray-800 hover:text-gray-500">Charging</a>
-        <a href="#" class="text-gray-800 hover:text-gray-500">Discover</a>
-        <a href="#" class="text-gray-800 hover:text-gray-500">Shop</a>
-      </nav>
-    </div>
+    <!-- DESKTOP NAV -->
+    <nav class="hidden xl:flex space-x-6">
+      <a href="#" class="text-gray-800 hover:text-gray-500">Vehicle</a>
+      <a href="#" class="text-gray-800 hover:text-gray-500">Energy</a>
+      <a href="#" class="text-gray-800 hover:text-gray-500">Charging</a>
+      <a href="#" class="text-gray-800 hover:text-gray-500">Discover</a>
+      <a href="#" class="text-gray-800 hover:text-gray-500">Shop</a>
+    </nav>
+  </div>
 
-    <div class="hidden xl:flex items-center space-x-6">
-      <a href="#" class="flex items-center gap-1 text-gray-800 hover:text-gray-500">
-        <img src="./public/img/icons/account.svg" class="h-5 w-5"> Tesla Account
-      </a>
-      <a href="#" class="flex items-center gap-1 text-gray-800 hover:text-gray-500">
-        <img src="./public/img/icons/glob.svg" class="h-5 w-5"> Region
-      </a>
-      <a href="#" class="flex items-center gap-1 text-gray-800 hover:text-gray-500">
-        <img src="./public/img/icons/support.svg" class="h-5 w-5"> Support
-      </a>
-    </div>
+  <!-- DESKTOP RIGHT -->
+  <div class="hidden xl:flex items-center space-x-6">
+    <a href="#" class="flex items-center gap-1 text-gray-800 hover:text-gray-500">
+      <img src="./public/img/icons/account.svg" class="h-5 w-5"> Tesla Account
+    </a>
+    <a href="#" class="flex items-center gap-1 text-gray-800 hover:text-gray-500">
+      <img src="./public/img/icons/glob.svg" class="h-5 w-5"> Region
+    </a>
+    <a href="#" class="flex items-center gap-1 text-gray-800 hover:text-gray-500">
+      <img src="./public/img/icons/support.svg" class="h-5 w-5"> Support
+    </a>
+  </div>
 
-    <button id="menu-btn" class="xl:hidden text-gray-800">Menu</button>
-  </header>
+  <!-- MOBILE MENU BUTTON -->
+  <button id="menu-btn" class="xl:hidden xl:text-gray-900 font-medium text-white text-lg">
+    Menu
+  </button>
+</header>
+
+
 
   <!-- Mobile Menu Overlay -->
   <div id="mobile-menu"
