@@ -677,52 +677,48 @@
 
 
 
-  <!-- ********** Fixed Bottom "Ask a Question" Field ********** -->
+ <!-- ********** Fixed Bottom "Ask a Question" Field ********** -->
 <section class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 z-50">
   <div class="max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-3 py-3 px-4 shadow-gray-200 shadow-md">
 
     <!-- Ask a Question Field -->
-<div class="relative w-md md:flex-2/3">
-  <input
-    id="questionInput"
-    type="text"
-    class="w-full border bg-gray-200 border-gray-300 rounded-md py-2.5 pl-10 pr-10 text-sm transition-all duration-200"
-    readonly
-  />
+    <div class="relative w-full md:flex-2/3">
+      <input
+        id="questionInput"
+        type="text"
+        class="w-full border bg-gray-200 border-gray-100 rounded-md py-2.5 pl-10 pr-10 text-sm transition-all duration-200"
+      />
 
-  <!-- Icon + Label -->
-  <span class="absolute left-2.5 top-1/2 -translate-y-1/2 flex items-center gap-2 text-gray-600 text-shadow-md font-medium pointer-events-none">
-    <span class="w-6 h-6">
-      <img src="./public/img/icons/message.svg" class="w-full h-full" alt="">
-    </span>
-    <span>Ask Question</span>
-  </span>
+      <!-- Icon + Label -->
+      <span id="staticLabel" class="absolute left-2.5 top-1/2 -translate-y-1/2 flex items-center gap-2 text-gray-600 font-medium pointer-events-none">
+        <span class="w-6 h-6">
+          <img src="./public/img/icons/message.svg" class="w-full h-full" alt="">
+        </span>
+        <span>Ask Question</span>
+      </span>
 
-  <!-- Arrow Icon -->
-  <span class="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-500 text-base pointer-events-none bg-gray-50 p-1 rounded-md">
-    <img src="./public/img/icons/arrow-up.svg" class="w-5 h-5" alt="">
-  </span>
-</div>
+      <!-- Arrow Icon Wrapper (we change BG here) -->
+      <span id="arrowBox" class="absolute right-2.5 top-1/2 -translate-y-1/2 bg-gray-100 p-1 rounded-md transition">
+        <img id="arrowIcon" src="./public/img/icons/arrow-up.svg" class="w-5 h-5" alt="">
+      </span>
+    </div>
 
-   <!-- Button -->
-<a
-  href="#"
-  class="flex items-center gap-2 bg-gray-200 hover:bg-gray-200 
-         transition px-4 py-2.5 rounded-md cursor-pointer 
-         whitespace-nowrap text-sm font-medium"
->
-  <img 
-    src="./public/img/images (1).png" 
-    alt="Steering Wheel Icon"
-    class="w-5 h-5 object-contain"
-  />
-
-  <span>Schedule a Drive Today</span>
-</a>
-
+    <!-- Button -->
+    <a
+      href="#"
+      class="flex items-center gap-2 bg-gray-200 transition px-4 py-2.5 rounded-md cursor-pointer whitespace-nowrap text-sm font-medium"
+    >
+      <img 
+        src="./public/img/images (1).png"
+        alt="Steering Wheel Icon"
+        class="w-5 h-5 object-contain"
+      />
+      <span>Schedule a Drive Today</span>
+    </a>
 
   </div>
 </section>
+
 
 
 
