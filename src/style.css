@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Clean, professional stylesheet for the showcase carousel
+/* for the showcase carousel i used
    Mobile-first. Breakpoints:
      - Mobile: < 600px
      - Tablet: 600px - 1199.98px
@@ -235,3 +235,5 @@ body{margin:0}
     padding: 1rem;
   }
 }
+
+

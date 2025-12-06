@@ -39,8 +39,7 @@ const nextBtn = document.getElementById("showcase-next");
 let scIndex = 0;
 
 function clearAllSizeClasses(card) {
-  card.classList.remove("size-active","size-adj","size-normal","size-end","active","adjacent","end-two");
-  // remove any leftover inline flex (defensive)
+  card.classList.remove("size-active", "size-adj", "size-normal", "size-end", "active", "adjacent", "end-two");
   card.style.flex = "";
 }
 
@@ -49,27 +48,24 @@ function applySizingClasses(cards) {
   cards.forEach(c => clearAllSizeClasses(c));
 
   if (scIndex === 0 && cards.length >= 2) {
-    // first dot: first two full-width (size-end)
-    cards[0].classList.add("size-end","active","end-two");
-    cards[1].classList.add("size-end","active","end-two");
+    cards[0].classList.add("size-end", "active", "end-two");
+    cards[1].classList.add("size-end", "active", "end-two");
     for (let i = 2; i < cards.length; i++) cards[i].classList.add("size-normal");
     return;
   }
 
   if (scIndex === lastIndex && cards.length >= 2) {
-    // last dot: last two full-width
-    cards[lastIndex].classList.add("size-end","active","end-two");
-    cards[lastIndex - 1].classList.add("size-end","active","end-two");
+    cards[lastIndex].classList.add("size-end", "active", "end-two");
+    cards[lastIndex - 1].classList.add("size-end", "active", "end-two");
     for (let i = 0; i < lastIndex - 1; i++) cards[i].classList.add("size-normal");
     return;
   }
 
-  // Normal centered case
   cards.forEach((card, i) => {
     if (i === scIndex) {
-      card.classList.add("size-active","active");
+      card.classList.add("size-active", "active");
     } else if (i === scIndex - 1 || i === scIndex + 1) {
-      card.classList.add("size-adj","adjacent");
+      card.classList.add("size-adj", "adjacent");
     } else {
       card.classList.add("size-normal");
     }
@@ -89,47 +85,49 @@ function updateShowcase() {
   const container = track.parentElement;
   if (!container) return;
 
-  // apply classes (CSS handles flex sizes per breakpoint)
   applySizingClasses(cards);
 
-  // wait for layout to settle after classes applied
   requestAnimationFrame(() => {
     const containerWidth = container.getBoundingClientRect().width;
     const trackWidth = track.scrollWidth;
 
-    // choose a reference card for centering (use current scIndex)
     let activeCard = cards[scIndex] || cards[0];
     const activeRect = activeCard.getBoundingClientRect();
     const activeWidth = activeRect.width;
     const activeOffsetLeft = activeCard.offsetLeft;
 
-    // translate needed to center the active card
-    const desiredTranslateCenter = activeOffsetLeft - (containerWidth - activeWidth) / 2;
+    const desiredTranslateCenter =
+      activeOffsetLeft - (containerWidth - activeWidth) / 2;
+
     const maxTranslate = Math.max(0, trackWidth - containerWidth);
     let translate = Math.min(Math.max(0, desiredTranslateCenter), maxTranslate);
 
-    // special-case ends to align edges
     const lastIndex = cards.length - 1;
+
     if (scIndex === 0) translate = 0;
     if (scIndex === lastIndex) translate = maxTranslate;
 
     track.style.transform = `translateX(-${translate}px)`;
 
-    // update dots colors
-    dots.forEach((dot, i) => dot.style.backgroundColor = i === scIndex ? "black" : "gray");
+    dots.forEach((dot, i) => {
+      dot.style.backgroundColor = i === scIndex ? "black" : "gray";
+    });
 
-    // accessibility
-    cards.forEach((card, i) => card.setAttribute("aria-hidden", i === scIndex ? "false" : "true"));
+    cards.forEach((card, i) =>
+      card.setAttribute("aria-hidden", i === scIndex ? "false" : "true")
+    );
 
-    // arrows visibility
     updateArrowsVisibility(cards.length);
   });
 }
 
-// dot click
-dots.forEach((dot, i) => dot.addEventListener("click", () => { scIndex = i; updateShowcase(); }));
+dots.forEach((dot, i) =>
+  dot.addEventListener("click", () => {
+    scIndex = i;
+    updateShowcase();
+  })
+);
 
-// keyboard nav
 document.addEventListener("keydown", (e) => {
   if (e.key === "ArrowRight") {
     scIndex = Math.min(scIndex + 1, track.querySelectorAll(".showcase-card").length - 1);
@@ -140,7 +138,6 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-// arrows
 nextBtn?.addEventListener("click", () => {
   scIndex = Math.min(scIndex + 1, track.querySelectorAll(".showcase-card").length - 1);
   updateShowcase();
@@ -150,10 +147,8 @@ prevBtn?.addEventListener("click", () => {
   updateShowcase();
 });
 
-// resize handler
 window.addEventListener("resize", () => requestAnimationFrame(updateShowcase));
 
-// init
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", updateShowcase);
 } else {
@@ -162,15 +157,153 @@ if (document.readyState === "loading") {
 
 // ===== FSD Video Pause/Play Toggle =====
 const video = document.querySelector("video");
-  const toggleBtn = document.getElementById("videoToggle");
-  const icon = document.getElementById("toggleIcon");
+const toggleBtn = document.getElementById("videoToggle");
+const icon = document.getElementById("toggleIcon");
 
-  toggleBtn.addEventListener("click", () => {
-    if (video.paused) {
-      video.play();
-      icon.src = "/public/img/icons/puse.svg";   // play → show pause icon
-    } else {
-      video.pause();
-      icon.src = "/public/img/icons/play.svg";   // pause → show play icon
+toggleBtn.addEventListener("click", () => {
+  if (video.paused) {
+    video.play();
+    icon.src = "/public/img/icons/puse.svg";   // play → show pause icon
+  } else {
+    video.pause();
+    icon.src = "/public/img/icons/play.svg";   // pause → show play icon
+  }
+});
+
+
+
+
+/* ============================================================
+    ===  SECOND SLIDER (SECTION B) — Independent Clone     ===
+   ============================================================ */
+
+function initSliderB() {
+  const trackB = document.getElementById("solar-track");
+  if (!trackB) return; // exit if section B does not exist yet
+
+  const dotsB = Array.from(document.querySelectorAll(".solar-dot"));
+  const prevBtnB = document.getElementById("solar-prev");
+  const nextBtnB = document.getElementById("solar-next");
+
+  let scIndexB = 0;
+
+  function clearAllSizeClassesB(card) {
+    card.classList.remove(
+      "size-active","size-adj","size-normal","size-end",
+      "active","adjacent","end-two"
+    );
+    card.style.flex = "";
+  }
+
+  function applySizingClassesB(cards) {
+    const lastIndex = cards.length - 1;
+    cards.forEach(c => clearAllSizeClassesB(c));
+
+    if (scIndexB === 0 && cards.length >= 2) {
+      cards[0].classList.add("size-end","active","end-two");
+      cards[1].classList.add("size-end","active","end-two");
+      for (let i = 2; i < cards.length; i++) cards[i].classList.add("size-normal");
+      return;
     }
+
+    if (scIndexB === lastIndex && cards.length >= 2) {
+      cards[lastIndex].classList.add("size-end","active","end-two");
+      cards[lastIndex - 1].classList.add("size-end","active","end-two");
+      for (let i = 0; i < lastIndex - 1; i++) cards[i].classList.add("size-normal");
+      return;
+    }
+
+    cards.forEach((card, i) => {
+      if (i === scIndexB) {
+        card.classList.add("size-active", "active");
+      } else if (i === scIndexB - 1 || i === scIndexB + 1) {
+        card.classList.add("size-adj", "adjacent");
+      } else {
+        card.classList.add("size-normal");
+      }
+    });
+  }
+
+  function updateArrowsVisibilityB(cardsCount) {
+    if (!prevBtnB || !nextBtnB) return;
+    prevBtnB.classList.toggle("arrow-hidden", scIndexB === 0);
+    nextBtnB.classList.toggle("arrow-hidden", scIndexB === Math.max(0, cardsCount - 1));
+  }
+
+  function updateShowcaseB() {
+    const cards = Array.from(trackB.querySelectorAll(".solar-card"));
+    if (!cards.length) return;
+
+    const container = trackB.parentElement;
+    if (!container) return;
+
+    applySizingClassesB(cards);
+
+    requestAnimationFrame(() => {
+      const containerWidth = container.getBoundingClientRect().width;
+      const trackWidth = trackB.scrollWidth;
+
+      let activeCard = cards[scIndexB] || cards[0];
+      const activeRect = activeCard.getBoundingClientRect();
+      const activeWidth = activeRect.width;
+      const activeOffsetLeft = activeCard.offsetLeft;
+
+      const desiredTranslateCenter =
+        activeOffsetLeft - (containerWidth - activeWidth) / 2;
+
+      const maxTranslate = Math.max(0, trackWidth - containerWidth);
+      let translate = Math.min(Math.max(0, desiredTranslateCenter), maxTranslate);
+
+      const lastIndex = cards.length - 1;
+
+      if (scIndexB === 0) translate = 0;
+      if (scIndexB === lastIndex) translate = maxTranslate;
+
+      trackB.style.transform = `translateX(-${translate}px)`;
+
+      dotsB.forEach((dot, i) => {
+        dot.style.backgroundColor = i === scIndexB ? "black" : "gray";
+      });
+
+      cards.forEach((card, i) =>
+        card.setAttribute("aria-hidden", i === scIndexB ? "false" : "true")
+      );
+
+      updateArrowsVisibilityB(cards.length);
+    });
+  }
+
+  dotsB.forEach((dot, i) =>
+    dot.addEventListener("click", () => {
+      scIndexB = i;
+      updateShowcaseB();
+    })
+  );
+
+  nextBtnB?.addEventListener("click", () => {
+    const cards = trackB.querySelectorAll(".solar-card");
+    scIndexB = Math.min(scIndexB + 1, cards.length - 1);
+    updateShowcaseB();
   });
+
+  prevBtnB?.addEventListener("click", () => {
+    scIndexB = Math.max(scIndexB - 1, 0);
+    updateShowcaseB();
+  });
+
+  // Resize
+  window.addEventListener("resize", () => requestAnimationFrame(updateShowcaseB));
+
+  // Init
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", updateShowcaseB);
+  } else {
+    updateShowcaseB();
+  }
+}
+
+// Run it
+initSliderB();
+
+
+
