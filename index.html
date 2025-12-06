@@ -682,25 +682,27 @@
   <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-3 py-3 px-4">
 
     <!-- Ask a Question Field -->
-    <div class="relative w-full md:flex-1">
-      <input
-        id="questionInput"
-        type="text"
-        class="w-full border border-gray-300 rounded-md py-2.5 pl-9 pr-10 text-sm transition-all duration-200 placeholder-gray-500"
-        placeholder="What does the Tesla app do?"
-        readonly
-      />
+<div class="relative w-full md:flex-1">
+  <input
+    id="questionInput"
+    type="text"
+    class="w-full border bg-gray-200 border-gray-300 rounded-md py-2.5 pl-10 pr-10 text-sm transition-all duration-200"
+    readonly
+  />
 
-      <!-- chat icon -->
-      <span class="absolute left-2.5 top-1/2 -translate-y-1/2 text-gray-600 text-base">
-        💬
-      </span>
+  <!-- Icon + Label -->
+  <span class="absolute left-2.5 top-1/2 -translate-y-1/2 flex items-center gap-1 text-gray-600 text-sm font-medium pointer-events-none">
+    <span class="w-4 h-4">
+      <img src="./public/img/icons/message.svg" class="w-full h-full" alt="">
+    </span>
+    <span>Ask Question</span>
+  </span>
 
-      <!-- arrow icon -->
-      <span class="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 text-base">
-        ↑
-      </span>
-    </div>
+  <!-- Arrow Icon -->
+  <span class="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-500 text-base pointer-events-none">
+    ↑
+  </span>
+</div>
 
    <!-- Button -->
 <a
