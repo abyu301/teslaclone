@@ -505,17 +505,14 @@
 
 <section class="w-full bg-white pt-10">
 
-  <!-- MAP IMAGE -->
+  <!-- GOOGLE MAP (replaces image) -->
   <div class="relative w-full">
-    <img 
-      src="./public/img/map.png" 
-      alt="Tesla Charger Map" 
-      class="w-full h-[500px] object-cover rounded-xl"
-    />
+    <div id="teslaMap" class="w-full h-[500px] rounded-xl"></div>
 
     <!-- FIND ME BUTTON -->
     <button 
-      class="absolute bottom-6 left-6 bg-white shadow-md px-4 py-2 rounded-md flex items-center gap-2 text-sm font-medium"
+      id="findMeBtn"
+      class="absolute bottom-6 left-6 bg-white shadow-md px-4 py-2 rounded-md flex items-center gap-2 text-sm font-medium z-20"
     >
       <img src="./public/img/icons/location.svg" class="w-5 h-5" />
       Find Me
@@ -523,7 +520,8 @@
 
     <!-- EXPAND ICON -->
     <button 
-      class="absolute bottom-6 right-6 bg-white shadow-md p-2 rounded-full"
+      id="expandMapBtn"
+      class="absolute bottom-6 right-6 bg-white shadow-md p-2 rounded-full z-20"
     >
       <img src="./public/img/icons/expand.svg" class="w-6 h-6" />
     </button>
@@ -580,6 +578,9 @@
   </div>
 
 </section>
+
+
+
 
 
 
@@ -705,6 +706,30 @@
 
 
 
+<!-- MAP WRAPPER -->
+<div class="relative w-full">
+  <div id="map" class="w-full h-[500px] rounded-xl"></div>
+
+  <!-- FIND ME BUTTON -->
+  <button 
+    class="absolute bottom-6 left-6 bg-white shadow-md px-4 py-2 rounded-md flex items-center gap-2 text-sm font-medium"
+    onclick="findMe()"
+  >
+    <img src="./public/img/icons/location.svg" class="w-5 h-5" />
+    Find Me
+  </button>
+
+  <!-- EXPAND BUTTON -->
+  <button 
+    class="absolute bottom-6 right-6 bg-white shadow-md p-2 rounded-full"
+  >
+    <img src="./public/img/icons/expand.svg" class="w-6 h-6" />
+  </button>
+</div>
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFyvWd9S5vGVNidoqHjiBxPXvfrdtM32g&callback=initMap" async defer></script>
 
 
 

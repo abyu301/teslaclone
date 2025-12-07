@@ -358,6 +358,52 @@ questionInput.addEventListener("input", () => {
 
 
 
+// ===========================
+// GOOGLE MAPS INTEGRATION
+// ===========================
+const apiKey = import.meta.env.VITE_GOOGLE_MAPS_KEY;
+
+// Dynamically load Google Maps Script
+function loadGoogleMaps() {
+  const script = document.createElement("script");
+  script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
+  script.async = true;
+  window.initMap = initMap;
+  document.head.appendChild(script);
+}
+
+loadGoogleMaps();
 
 
   
+let map;
+
+function initMap() {
+  const defaultPos = { lat: 37.7749, lng: -122.4194 };
+
+  map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 10,
+    center: defaultPos,
+    mapId: "DEMO_MAP_ID"
+  });
+}
+
+function findMe() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition((pos) => {
+      const userPos = {
+        lat: pos.coords.latitude,
+        lng: pos.coords.longitude
+      };
+      map.setCenter(userPos);
+      map.setZoom(13);
+
+      new google.maps.Marker({
+        position: userPos,
+        map: map
+      });
+    });
+  }
+}
+
+
