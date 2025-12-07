@@ -519,54 +519,77 @@
 </div>
 
   <!-- TEXT + BUTTONS -->
-  <div class="max-w-7xl mx-auto mt-10 px-6">
+<div class="w-full mx-auto mt-10 pb-28 px-6 ">
 
-    <h2 class="text-4xl font-semibold">Find Your Charge</h2>
+  <!-- MAIN FLEX (LEFT + RIGHT) -->
+  <div class="flex flex-col lg:flex-row justify-between items-start lg:items-top gap-10">
 
-    <p class="mt-3 text-gray-600 text-lg">
-      View the network of Tesla Superchargers and Destination Chargers available near you.
-    </p>
+    <!-- LEFT SIDE -->
+    <div>
+      <h2 class="text-5xl font-semibold">Find Your Charge</h2>
 
-    <!-- BUTTON ROW -->
-    <div class="flex items-center gap-4 mt-6">
-      <a 
-        href="#" 
-        class="px-6 py-3 bg-black text-white rounded-md text-sm font-medium hover:bg-gray-900"
-      >
-        View Network
-      </a>
+      <p class="mt-3 text-gray-600 text-xl">
+        View the network of Tesla Superchargers and Destination Chargers available near you.
+      </p>
 
-      <a 
-        href="#" 
-        class="px-6 py-3 bg-gray-200 text-gray-800 rounded-md text-sm font-medium hover:bg-gray-300"
-      >
-        Learn More
-      </a>
+      <!-- BUTTON ROW -->
+      <div class="flex items-center gap-4 mt-6">
+        <a 
+          href="#" 
+          class="px-6 py-3 bg-black text-white rounded-md text-sm font-medium hover:bg-gray-900"
+        >
+          View Network
+        </a>
+
+        <a 
+          href="#" 
+          class="px-6 py-3 bg-gray-200 text-gray-800 rounded-md text-sm font-medium hover:bg-gray-300"
+        >
+          Learn More
+        </a>
+      </div>
     </div>
 
-    <!-- COUNTERS -->
-    <div class="flex flex-col md:flex-row items-start md:items-center justify-end gap-10 mt-12">
+   <!-- RIGHT SIDE (COUNTERS) -->
+<!-- RIGHT SIDE (COUNTERS) -->
+<div class="flex flex-col md:flex-row items-start md:items-center gap-16 mt-10 lg:mt-0">
 
-      <!-- SUPERCHARGERS -->
-      <div class="flex items-center gap-3">
-        <span class="text-4xl font-semibold">34,938</span>
-        <span class="w-7 h-7 bg-red-600 rounded-full flex items-center justify-center">
-          <img src="./public/img/icons/bolt.svg" class="w-4 h-4 invert" />
-        </span>
-        <p class="text-gray-600 mt-1">Superchargers</p>
-      </div>
-
-      <!-- DESTINATION CHARGERS -->
-      <div class="flex items-center gap-3">
-        <span class="text-4xl font-semibold">3,107</span>
-        <span class="w-7 h-7 bg-gray-700 rounded-full flex items-center justify-center">
-          <img src="./public/img/icons/plug.svg" class="w-4 h-4 invert" />
-        </span>
-        <p class="text-gray-600 mt-1">Destination Chargers</p>
-      </div>
-
+  <!-- SUPERCHARGERS -->
+  <div class="flex flex-col items-start text-left">
+    <!-- TOP ROW -->
+    <div class="flex items-center gap-2">
+      <span class="text-5xl font-semibold">34,938</span>
+      <span class="w-13 h-13 bg-red-600 rounded-full flex items-center justify-center">
+        <img src="./public/img/icons/bolt.svg" class="w-8 h-8 invert" />
+      </span>
     </div>
+
+    <!-- LABEL LEFT-ALIGNED -->
+    <p class="text-gray-800 text-xl mt-1">Superchargers</p>
   </div>
+
+  <!-- DESTINATION CHARGERS -->
+  <div class="flex flex-col items-start text-left">
+    <!-- TOP ROW -->
+    <div class="flex items-center gap-2">
+      <span class="text-5xl font-semibold">3,107</span>
+      <span class="w-13 h-13 bg-gray-400 rounded-full flex items-center justify-center">
+        <img src="./public/img/icons/plug.svg" class="w-8 h-8 invert" />
+      </span>
+    </div>
+
+    <!-- LABEL LEFT-ALIGNED -->
+    <p class="text-gray-800 text-xl mt-1">Destination Chargers</p>
+  </div>
+
+</div>
+
+
+
+  </div>
+</div>
+
+
 
 </section>
 
@@ -585,7 +608,7 @@
 
 
   <!-- ************************** Solar Slider *************************** -->
-<section class="w-full overflow-hidden py-12 bg-gray-50">
+<section class="w-full overflow-hidden py-12 bg-white">
   <div class="w-full">
     <div class="relative overflow-hidden">
 
