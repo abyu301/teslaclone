@@ -503,29 +503,20 @@
 <!--  FIND YOUR CHARGE SECTION    -->
 <!-- ============================= -->
 
-<section class="w-full bg-white pt-10">
+<section class="w-full bg-white pt-10 px-9">
+  <!-- MAP WRAPPER -->
+<div class="relative w-full">
+  <div id="map" class="w-full h-[580px] rounded-xl"></div>
 
-  <!-- GOOGLE MAP (replaces image) -->
-  <div class="relative w-full">
-    <div id="teslaMap" class="w-full h-[500px] rounded-xl"></div>
-
-    <!-- FIND ME BUTTON -->
-    <button 
-      id="findMeBtn"
-      class="absolute bottom-6 left-6 bg-white shadow-md px-4 py-2 rounded-md flex items-center gap-2 text-sm font-medium z-20"
-    >
-      <img src="./public/img/icons/location.svg" class="w-5 h-5" />
-      Find Me
-    </button>
-
-    <!-- EXPAND ICON -->
-    <button 
-      id="expandMapBtn"
-      class="absolute bottom-6 right-6 bg-white shadow-md p-2 rounded-full z-20"
-    >
-      <img src="./public/img/icons/expand.svg" class="w-6 h-6" />
-    </button>
-  </div>
+  <!-- FIND ME BUTTON -->
+  <button 
+    class="absolute bottom-6 left-6 bg-white shadow-md px-4 py-2 rounded-md flex items-center gap-2 text-sm font-medium"
+    onclick="findMe()"
+  >
+    <img src="./public/img/icons/map-pin.svg" class="w-5 h-5" />
+    Find Me
+  </button>
+</div>
 
   <!-- TEXT + BUTTONS -->
   <div class="max-w-7xl mx-auto mt-10 px-6">
@@ -706,31 +697,6 @@
 
 
 
-<!-- MAP WRAPPER -->
-<div class="relative w-full">
-  <div id="map" class="w-full h-[500px] rounded-xl"></div>
-
-  <!-- FIND ME BUTTON -->
-  <button 
-    class="absolute bottom-6 left-6 bg-white shadow-md px-4 py-2 rounded-md flex items-center gap-2 text-sm font-medium"
-    onclick="findMe()"
-  >
-    <img src="./public/img/icons/location.svg" class="w-5 h-5" />
-    Find Me
-  </button>
-
-  <!-- EXPAND BUTTON -->
-  <button 
-    class="absolute bottom-6 right-6 bg-white shadow-md p-2 rounded-full"
-  >
-    <img src="./public/img/icons/expand.svg" class="w-6 h-6" />
-  </button>
-</div>
-
-
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFyvWd9S5vGVNidoqHjiBxPXvfrdtM32g&callback=initMap" async defer></script>
-
 
 
 
@@ -903,7 +869,7 @@
 
 
 
-
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFyvWd9S5vGVNidoqHjiBxPXvfrdtM32g&callback=initMap" async defer></script>
 
   <script type="module" src="/src/main.js"></script>
 </body>
