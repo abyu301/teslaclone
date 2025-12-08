@@ -503,10 +503,10 @@
 <!--  FIND YOUR CHARGE SECTION    -->
 <!-- ============================= -->
 
-<section class="w-full bg-white pt-10 px-9">
+<section class="w-full bg-white pt-10 md:px-9 lg:px-9">
   <!-- MAP WRAPPER -->
 <div class="relative w-full">
-  <div id="map" class="w-full h-[580px] rounded-xl"></div>
+  <div id="map" class="w-full h-[580px] "></div>
 
   <!-- FIND ME BUTTON -->
   <button 
@@ -526,7 +526,7 @@
 
     <!-- LEFT SIDE -->
     <div>
-      <h2 class="text-5xl font-semibold">Find Your Charge</h2>
+      <h2 class="lg:text-5xl text-4xl font-semibold">Find Your Charge</h2>
 
       <p class="mt-3 text-gray-600 text-xl">
         View the network of Tesla Superchargers and Destination Chargers available near you.
@@ -552,14 +552,14 @@
 
    <!-- RIGHT SIDE (COUNTERS) -->
 <!-- RIGHT SIDE (COUNTERS) -->
-<div class="flex flex-col md:flex-row items-start md:items-center gap-16 mt-10 lg:mt-0">
+<div class="flex  md:flex-row items-start md:items-center gap-6 lg:gap-16 mt-10 lg:mt-0">
 
   <!-- SUPERCHARGERS -->
   <div class="flex flex-col items-start text-left">
     <!-- TOP ROW -->
     <div class="flex items-center gap-2">
-      <span class="text-5xl font-semibold">34,938</span>
-      <span class="w-13 h-13 bg-red-600 rounded-full flex items-center justify-center">
+      <span class="lg:text-5xl text-4xl font-semibold">34,938</span>
+      <span class=" w-9 h-9 lg:w-13 lg:h-13 bg-red-600 rounded-full flex items-center justify-center">
         <img src="./public/img/icons/bolt.svg" class="w-8 h-8 invert" />
       </span>
     </div>
@@ -572,14 +572,14 @@
   <div class="flex flex-col items-start text-left">
     <!-- TOP ROW -->
     <div class="flex items-center gap-2">
-      <span class="text-5xl font-semibold">3,107</span>
-      <span class="w-13 h-13 bg-gray-400 rounded-full flex items-center justify-center">
+      <span class="lg:text-5xl text-4xl font-semibold">3,107</span>
+      <span class="w-9 h-9 lg:w-13 lg:h-13 bg-gray-400 rounded-full flex items-center justify-center">
         <img src="./public/img/icons/plug.svg" class="w-8 h-8 invert" />
       </span>
     </div>
 
     <!-- LABEL LEFT-ALIGNED -->
-    <p class="text-gray-800 text-xl mt-1">Destination Chargers</p>
+    <p class="text-gray-800 text-lg lg:text-xl mt-1">Destination Chargers</p>
   </div>
 
 </div>
