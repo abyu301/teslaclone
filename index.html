@@ -9,18 +9,17 @@
 <body class="bg-gray-50">
 
   <!-- HEADER -->
-<header 
-  class="fixed top-0 left-0 w-full z-50 
-         flex justify-between items-center 
-         px-6 py-4
-         
-         bg-transparent shadow-none       /* mobile default */
-         xl:bg-white xl:shadow-md         /* desktop */
-         
-         transition-all duration-300"
-  id="mainHeader"
->
-  <!-- LEFT SECTION -->
+  <header 
+    class="
+      absolute top-0 left-0 w-full z-50
+      flex justify-between items-center 
+      px-6 py-4
+      bg-transparent
+      xl:fixed xl:bg-white xl:shadow-md
+    "
+  >
+
+  <!-- LEFT -->
   <div class="flex items-center space-x-8">
     <img src="./public/img/tesla-logo1.png" alt="Tesla Logo" class="h-6 w-auto">
 
@@ -34,7 +33,7 @@
     </nav>
   </div>
 
-  <!-- DESKTOP RIGHT -->
+  <!-- RIGHT DESKTOP -->
   <div class="hidden xl:flex items-center space-x-6">
     <a href="#" class="flex items-center gap-1 text-gray-800 hover:text-gray-500">
       <img src="./public/img/icons/account.svg" class="h-5 w-5"> Tesla Account
@@ -48,10 +47,11 @@
   </div>
 
   <!-- MOBILE MENU BUTTON -->
-  <button id="menu-btn" class="xl:hidden xl:text-gray-900 font-medium text-white text-lg">
+  <button id="menu-btn" class="xl:hidden font-medium text-white text-lg">
     Menu
   </button>
-</header>
+  </header>
+
 
 
 
@@ -150,340 +150,340 @@
       </button>
 
     </div>
-</section>
+  </section>
 
 
   <!-- ************************** Showcase Slider *************************** -->
 
-<section class="w-full overflow-hidden py-12 bg-gray-50">
-  <div class="w-full">
-    <!-- Slider Container -->
-    <div class="relative overflow-hidden">
-      <!-- Cards Wrapper -->
-      <div id="showcase-track" class="flex transition-transform duration-500 ease-out">
+  <section class="w-full overflow-hidden py-12 bg-gray-50">
+    <div class="w-full">
+      <!-- Slider Container -->
+      <div class="relative overflow-hidden">
+        <!-- Cards Wrapper -->
+        <div id="showcase-track" class="flex transition-transform duration-500 ease-out">
 
-        <!-- Card 1 -->
-        <div class="showcase-card flex-shrink-0 w-full sm:w-[60%] lg:w-[45%] px-4">
-          <div class="relative rounded-xl overflow-hidden shadow-md h-[550px]">
-            <!-- image -->
-            <img src="./public/img/showcase/Homepage-Card-Model-3-Desktop-US-v2.avif"
-              class="w-full h-full object-cover">
+          <!-- Card 1 -->
+          <div class="showcase-card flex-shrink-0 w-full sm:w-[60%] lg:w-[45%] px-4">
+            <div class="relative rounded-xl overflow-hidden shadow-md h-[550px]">
+              <!-- image -->
+              <img src="./public/img/showcase/Homepage-Card-Model-3-Desktop-US-v2.avif"
+                class="w-full h-full object-cover">
 
-            <!-- Top-left label -->
-            <div class="absolute top-4 left-10 z-40">
-              <p class="text-white/90 text-sm md:text-base font-medium drop-shadow">Sport Sedan</p>
-            </div>
+              <!-- Top-left label -->
+              <div class="absolute top-4 left-10 z-40">
+                <p class="text-white/90 text-sm md:text-base font-medium drop-shadow">Sport Sedan</p>
+              </div>
 
-            <!-- dark gradient to improve text contrast -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent pointer-events-none"></div>
+              <!-- dark gradient to improve text contrast -->
+              <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent pointer-events-none"></div>
 
-            <!-- overlay content (bottom-left) -->
-            <div class="absolute inset-0 flex items-end">
-              <div class="p-6 md:p-8 lg:p-10 max-w-[60%]">
-                <h3 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold">Model 3</h3>
-                <p class="text-white/90 mt-2">Lease starting at $329/mo</p>
-                <p class="text-white font-medium text-xl mt-1 underline">1.99% APR Ending December 4</p>
+              <!-- overlay content (bottom-left) -->
+              <div class="absolute inset-0 flex items-end">
+                <div class="p-6 md:p-8 lg:p-10 max-w-[60%]">
+                  <h3 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold">Model 3</h3>
+                  <p class="text-white/90 mt-2">Lease starting at $329/mo</p>
+                  <p class="text-white font-medium text-xl mt-1 underline">1.99% APR Ending December 4</p>
 
-                <!-- Buttons -->
-                <div class="mt-8 flex justify-start gap-4 cta-row">
+                  <!-- Buttons -->
+                  <div class="mt-8 flex justify-start gap-4 cta-row">
 
-                  <div class="mt-8 flex gap-4 cta-row">
+                    <div class="mt-8 flex gap-4 cta-row">
 
-                  <button class=" bg-[#3E6AE1] text-white px-7 lg:px-13 py-3 rounded-md text-sm font-medium hover:bg-[#3457b2] transition">Order Now</button>
-                  <button class="bg-white text-black px-7 lg:px-13 py-3 rounded-md text-sm font-medium hover:bg-gray-200 transition">Learn More</button>
+                    <button class=" bg-[#3E6AE1] text-white px-7 lg:px-13 py-3 rounded-md text-sm font-medium hover:bg-[#3457b2] transition">Order Now</button>
+                    <button class="bg-white text-black px-7 lg:px-13 py-3 rounded-md text-sm font-medium hover:bg-gray-200 transition">Learn More</button>
+
+                    </div>
+
 
                   </div>
-
-
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Card 2 -->
-        <div class="showcase-card flex-shrink-0 w-full sm:w-[60%] lg:w-[45%] px-4">
-          <div class="relative rounded-xl overflow-hidden shadow-md h-[550px]">
-            <!-- image -->
-            <img src="./public/img/showcase/Homepage-Card-Model-Y-Desktop-US-v2.avif"
-              class="w-full h-full object-cover">
+          <!-- Card 2 -->
+          <div class="showcase-card flex-shrink-0 w-full sm:w-[60%] lg:w-[45%] px-4">
+            <div class="relative rounded-xl overflow-hidden shadow-md h-[550px]">
+              <!-- image -->
+              <img src="./public/img/showcase/Homepage-Card-Model-Y-Desktop-US-v2.avif"
+                class="w-full h-full object-cover">
 
-            <!-- Top-left label -->
-            <div class="absolute top-4 left-10 z-40">
-              <p class="text-white/90 text-lg font-medium drop-shadow">Midsize SUV</p>
-            </div>
+              <!-- Top-left label -->
+              <div class="absolute top-4 left-10 z-40">
+                <p class="text-white/90 text-lg font-medium drop-shadow">Midsize SUV</p>
+              </div>
 
-            <!-- gradient -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent pointer-events-none"></div>
+              <!-- gradient -->
+              <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent pointer-events-none"></div>
 
-            <!-- overlay content (bottom-left) -->
-            <div class="absolute inset-0 flex items-end">
-              <div class="p-6 md:p-8 lg:p-10 max-w-[60%]">
-                <h3 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold">Model Y</h3>
-                <p class="text-white font-medium text-xl mt-1 underline">1.99% APR Ending December 4</p>
+              <!-- overlay content (bottom-left) -->
+              <div class="absolute inset-0 flex items-end">
+                <div class="p-6 md:p-8 lg:p-10 max-w-[60%]">
+                  <h3 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold">Model Y</h3>
+                  <p class="text-white font-medium text-xl mt-1 underline">1.99% APR Ending December 4</p>
 
-                <div class="mt-8 flex gap-4 cta-row">
+                  <div class="mt-8 flex gap-4 cta-row">
 
-                  <button class=" bg-[#3E6AE1] text-white px-7 lg:px-13 py-3 rounded-md text-sm font-medium hover:bg-[#3457b2] transition">Order Now</button>
-                  <button class="bg-white text-black px-7 lg:px-13 py-3 rounded-md text-sm font-medium hover:bg-gray-200 transition">Learn More</button>
+                    <button class=" bg-[#3E6AE1] text-white px-7 lg:px-13 py-3 rounded-md text-sm font-medium hover:bg-[#3457b2] transition">Order Now</button>
+                    <button class="bg-white text-black px-7 lg:px-13 py-3 rounded-md text-sm font-medium hover:bg-gray-200 transition">Learn More</button>
 
-                  </div>
+                    </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Card 3 -->
-        <div class="showcase-card flex-shrink-0 w-full sm:w-[60%] lg:w-[45%] px-4">
-          <div class="relative rounded-xl overflow-hidden shadow-md h-[550px]">
-            <img src="./public/img/showcase/Homepage-Card-Cybertruck-Desktop-US-v3.avif"
-              class="w-full h-full object-cover">
+          <!-- Card 3 -->
+          <div class="showcase-card flex-shrink-0 w-full sm:w-[60%] lg:w-[45%] px-4">
+            <div class="relative rounded-xl overflow-hidden shadow-md h-[550px]">
+              <img src="./public/img/showcase/Homepage-Card-Cybertruck-Desktop-US-v3.avif"
+                class="w-full h-full object-cover">
 
-            <!-- Top-left label -->
-            <div class="absolute top-4 left-10 z-40">
-              <p class="text-white/90 text-sm md:text-base font-medium drop-shadow">Utility Truck</p>
-            </div>
+              <!-- Top-left label -->
+              <div class="absolute top-4 left-10 z-40">
+                <p class="text-white/90 text-sm md:text-base font-medium drop-shadow">Utility Truck</p>
+              </div>
 
-            <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent pointer-events-none"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent pointer-events-none"></div>
 
-            <div class="absolute inset-0 flex items-end">
-              <div class="p-6 md:p-8 lg:p-10 max-w-[60%]">
-                <h3 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold">Cybertruck</h3>
-                <p class="text-white/90 mt-2">Utility & Performance Redefined</p>
-                <p class="text-white font-medium text-xl mt-1 underline">2.49% APR Ending December 4</p>
+              <div class="absolute inset-0 flex items-end">
+                <div class="p-6 md:p-8 lg:p-10 max-w-[60%]">
+                  <h3 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold">Cybertruck</h3>
+                  <p class="text-white/90 mt-2">Utility & Performance Redefined</p>
+                  <p class="text-white font-medium text-xl mt-1 underline">2.49% APR Ending December 4</p>
 
-                <div class="mt-8 flex gap-4 cta-row">
+                  <div class="mt-8 flex gap-4 cta-row">
 
-                  <button class=" bg-[#3E6AE1] text-white px-7 lg:px-13 py-3 rounded-md text-sm font-medium hover:bg-[#3457b2] transition">Order Now</button>
-                  <button class="bg-white text-black px-7 lg:px-13 py-3 rounded-md text-sm font-medium hover:bg-gray-200 transition">Learn More</button>
+                    <button class=" bg-[#3E6AE1] text-white px-7 lg:px-13 py-3 rounded-md text-sm font-medium hover:bg-[#3457b2] transition">Order Now</button>
+                    <button class="bg-white text-black px-7 lg:px-13 py-3 rounded-md text-sm font-medium hover:bg-gray-200 transition">Learn More</button>
 
-                  </div>
+                    </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Card 4 -->
-        <div class="showcase-card flex-shrink-0 w-full sm:w-[60%] lg:w-[45%] px-4">
-          <div class="relative rounded-xl overflow-hidden shadow-md h-[550px]">
-            <img src="./public/img/showcase/Homepage-Card-Model-X-New-Desktop-US-v4.avif"
-              class="w-full h-full object-cover">
+          <!-- Card 4 -->
+          <div class="showcase-card flex-shrink-0 w-full sm:w-[60%] lg:w-[45%] px-4">
+            <div class="relative rounded-xl overflow-hidden shadow-md h-[550px]">
+              <img src="./public/img/showcase/Homepage-Card-Model-X-New-Desktop-US-v4.avif"
+                class="w-full h-full object-cover">
 
-            <!-- Top-left label -->
-            <div class="absolute top-4 left-10 z-40">
-              <p class="text-white/90 text-sm md:text-base font-medium drop-shadow">Luxury SUV</p>
-            </div>
+              <!-- Top-left label -->
+              <div class="absolute top-4 left-10 z-40">
+                <p class="text-white/90 text-sm md:text-base font-medium drop-shadow">Luxury SUV</p>
+              </div>
 
-            <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent pointer-events-none"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent pointer-events-none"></div>
 
-            <div class="absolute inset-0 flex items-end">
-              <div class="p-6 md:p-8 lg:p-10 max-w-[60%]">
-                <h3 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold">Model X</h3>
-                <p class="text-white/90 mt-2">Luxury SUV with Falcon-Wing Doors</p>
-                <p class="text-white font-medium mt-1">1.49% APR</p>
+              <div class="absolute inset-0 flex items-end">
+                <div class="p-6 md:p-8 lg:p-10 max-w-[60%]">
+                  <h3 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold">Model X</h3>
+                  <p class="text-white/90 mt-2">Luxury SUV with Falcon-Wing Doors</p>
+                  <p class="text-white font-medium mt-1">1.49% APR</p>
 
-                <div class="mt-8 flex gap-4 cta-row">
+                  <div class="mt-8 flex gap-4 cta-row">
 
-                  <button class=" bg-[#3E6AE1] text-white px-7 lg:px-13 py-3 rounded-md text-sm font-medium hover:bg-[#3457b2] transition">Order Now</button>
-                  <button class="bg-white text-black px-7 lg:px-13 py-3 rounded-md text-sm font-medium hover:bg-gray-200 transition">Learn More</button>
+                    <button class=" bg-[#3E6AE1] text-white px-7 lg:px-13 py-3 rounded-md text-sm font-medium hover:bg-[#3457b2] transition">Order Now</button>
+                    <button class="bg-white text-black px-7 lg:px-13 py-3 rounded-md text-sm font-medium hover:bg-gray-200 transition">Learn More</button>
 
-                  </div>
+                    </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Card 5 -->
-        <div class="showcase-card flex-shrink-0 w-full sm:w-[60%] lg:w-[45%] px-4">
-          <div class="relative rounded-xl overflow-hidden shadow-md h-[550px]">
-            <img src="./public/img/showcase/Homepage-Card-Model-S-Desktop-US-v3.avif"
-              class="w-full h-full object-cover">
+          <!-- Card 5 -->
+          <div class="showcase-card flex-shrink-0 w-full sm:w-[60%] lg:w-[45%] px-4">
+            <div class="relative rounded-xl overflow-hidden shadow-md h-[550px]">
+              <img src="./public/img/showcase/Homepage-Card-Model-S-Desktop-US-v3.avif"
+                class="w-full h-full object-cover">
 
-            <!-- Top-left label -->
-            <div class="absolute top-4 left-10 z-40">
-              <p class="text-white/90 text-sm md:text-base font-medium drop-shadow">Performance Sedan</p>
-            </div>
+              <!-- Top-left label -->
+              <div class="absolute top-4 left-10 z-40">
+                <p class="text-white/90 text-sm md:text-base font-medium drop-shadow">Performance Sedan</p>
+              </div>
 
-            <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent pointer-events-none"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent pointer-events-none"></div>
 
-            <div class="absolute inset-0 flex items-end">
-              <div class="p-6 md:p-8 lg:p-10 max-w-[60%]">
-                <h3 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold">Model S</h3>
-                <p class="text-white/90 mt-2">The Ultimate Performance Sedan</p>
-                <p class="text-white font-medium mt-1">0.49% APR</p>
+              <div class="absolute inset-0 flex items-end">
+                <div class="p-6 md:p-8 lg:p-10 max-w-[60%]">
+                  <h3 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold">Model S</h3>
+                  <p class="text-white/90 mt-2">The Ultimate Performance Sedan</p>
+                  <p class="text-white font-medium mt-1">0.49% APR</p>
 
-                <div class="mt-8 flex gap-4 cta-row">
+                  <div class="mt-8 flex gap-4 cta-row">
 
-                  <button class=" bg-[#3E6AE1] text-white px-7 lg:px-13 py-3 rounded-md text-sm font-medium hover:bg-[#3457b2] transition">Order Now</button>
-                  <button class="bg-white text-black px-7 lg:px-13 py-3 rounded-md text-sm font-medium hover:bg-gray-200 transition">Learn More</button>
+                    <button class=" bg-[#3E6AE1] text-white px-7 lg:px-13 py-3 rounded-md text-sm font-medium hover:bg-[#3457b2] transition">Order Now</button>
+                    <button class="bg-white text-black px-7 lg:px-13 py-3 rounded-md text-sm font-medium hover:bg-gray-200 transition">Learn More</button>
 
-                  </div>
+                    </div>
+                </div>
               </div>
             </div>
           </div>
+
+        </div>
+
+        <!-- Prev / Next Buttons (unchanged) -->
+        <button id="showcase-prev"
+          class="absolute left-12 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-md bg-white/90 hover:bg-white shadow-md flex items-center justify-center transition">
+          <img src="./public/img/icons/arrow-left.svg" class="w-6 h-6">
+          <span class="sr-only">Previous</span>
+        </button>
+
+        <button id="showcase-next"
+          class="absolute right-12 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-md bg-white/90 hover:bg-white shadow-md flex items-center justify-center transition">
+          <img src="./public/img/icons/arrow-right.svg" class="w-6 h-6">
+          <span class="sr-only">Next</span>
+        </button>
+
+        <!-- Dots (unchanged) -->
+        <div class="flex justify-center mt-6 space-x-3">
+          <button class="dot w-3 h-3 rounded-full bg-gray-400"></button>
+          <button class="dot w-3 h-3 rounded-full bg-gray-400"></button>
+          <button class="dot w-3 h-3 rounded-full bg-gray-400"></button>
+          <button class="dot w-3 h-3 rounded-full bg-gray-400"></button>
+          <button class="dot w-3 h-3 rounded-full bg-gray-400"></button>
         </div>
 
       </div>
-
-      <!-- Prev / Next Buttons (unchanged) -->
-      <button id="showcase-prev"
-        class="absolute left-12 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-md bg-white/90 hover:bg-white shadow-md flex items-center justify-center transition">
-        <img src="./public/img/icons/arrow-left.svg" class="w-6 h-6">
-        <span class="sr-only">Previous</span>
-      </button>
-
-      <button id="showcase-next"
-        class="absolute right-12 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-md bg-white/90 hover:bg-white shadow-md flex items-center justify-center transition">
-        <img src="./public/img/icons/arrow-right.svg" class="w-6 h-6">
-        <span class="sr-only">Next</span>
-      </button>
-
-      <!-- Dots (unchanged) -->
-      <div class="flex justify-center mt-6 space-x-3">
-        <button class="dot w-3 h-3 rounded-full bg-gray-400"></button>
-        <button class="dot w-3 h-3 rounded-full bg-gray-400"></button>
-        <button class="dot w-3 h-3 rounded-full bg-gray-400"></button>
-        <button class="dot w-3 h-3 rounded-full bg-gray-400"></button>
-        <button class="dot w-3 h-3 rounded-full bg-gray-400"></button>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
 
 
 
   <!-- ************************** Promo Section *************************** -->
 
-<section class="promo-section px-4 md:px-8 lg:px-12 py-6">
-  <div class="w-full mx-auto">
+  <section class="promo-section px-4 md:px-8 lg:px-12 py-6">
+    <div class="w-full mx-auto">
 
-    <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+      <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
 
-      <!-- PROMO CARD -->
-      <article class="promo-card bg-[#efeeee] rounded-xl overflow-hidden shadow-sm flex flex-col lg:flex-row h-[228px]">
+        <!-- PROMO CARD -->
+        <article class="promo-card bg-[#efeeee] rounded-xl overflow-hidden shadow-sm flex flex-col lg:flex-row h-[228px]">
 
-        <!-- IMAGE BLOCK -->
-        <div class="promo-media 
-                    order-1 lg:order-2
-                    w-full lg:w-64 
-                    flex-shrink-0">
-          <img src="./public/img/Promo-pic/Homepage-Grid-Current-Offers.avif" class="w-full h-full object-cover" />
-        </div>
+          <!-- IMAGE BLOCK -->
+          <div class="promo-media 
+                      order-1 lg:order-2
+                      w-full lg:w-64 
+                      flex-shrink-0">
+            <img src="./public/img/Promo-pic/Homepage-Grid-Current-Offers.avif" class="w-full h-full object-cover" />
+          </div>
 
-        <!-- TEXT BLOCK -->
-        <div class="promo-content 
-                    order-2 lg:order-1
-                    flex flex-col justify-center 
-                    w-full p-4 lg:p-8">
-          <h3 class="text-3xl lg:text-4xl font-bold text-slate-800 mb-1">
-            Current Offers
-          </h3>
-          <p class="text-slate-800 mb-3 text-lg lg:text-xl">
-            Explore limited-time offers on Tesla vehicles.
-          </p>
-          <button class="rounded-md bg-white text-slate-900 px-5 py-2 shadow-sm w-md text-sm">
-            Learn More
-          </button>
-        </div>
+          <!-- TEXT BLOCK -->
+          <div class="promo-content 
+                      order-2 lg:order-1
+                      flex flex-col justify-center 
+                      w-full p-4 lg:p-8">
+            <h3 class="text-3xl lg:text-4xl font-bold text-slate-800 mb-1">
+              Current Offers
+            </h3>
+            <p class="text-slate-800 mb-3 text-lg lg:text-xl">
+              Explore limited-time offers on Tesla vehicles.
+            </p>
+            <button class="rounded-md bg-white text-slate-900 px-5 py-2 shadow-sm w-md text-sm">
+              Learn More
+            </button>
+          </div>
 
-      </article>
+        </article>
 
-      <!-- PROMO CARD 2 — SAME STRUCTURE -->
-      <article class="promo-card bg-[#efeeee] rounded-xl overflow-hidden shadow-sm flex flex-col lg:flex-row h-[228px]">
+        <!-- PROMO CARD 2 — SAME STRUCTURE -->
+        <article class="promo-card bg-[#efeeee] rounded-xl overflow-hidden shadow-sm flex flex-col lg:flex-row h-[228px]">
 
-        <div class="promo-media 
-                    order-1 lg:order-2
-                    w-full lg:w-64 
-                    flex-shrink-0">
-          <img src="./public/img/Promo-pic/Homepage-Grid-American-Heroes-v2.avif" class="w-full h-full object-cover" />
-        </div>
+          <div class="promo-media 
+                      order-1 lg:order-2
+                      w-full lg:w-64 
+                      flex-shrink-0">
+            <img src="./public/img/Promo-pic/Homepage-Grid-American-Heroes-v2.avif" class="w-full h-full object-cover" />
+          </div>
 
-        <div class="promo-content 
-                    order-2 lg:order-1
-                    flex flex-col justify-center 
-                    w-full p-4 lg:p-8">
-          <h3 class="text-3xl lg:text-4xl font-bold text-slate-800 mb-1">
-            American Heroes
-          </h3>
-          <p class="text-slate-800 mb-3 text-lg lg:text-xl">
-            $500 off for military, first responders, healthcare, teachers and students.
-          </p>
-          <button class="rounded-md bg-white text-slate-900 px-5 py-2 shadow-sm text-sm w-md">
-            Learn More
-          </button>
-        </div>
+          <div class="promo-content 
+                      order-2 lg:order-1
+                      flex flex-col justify-center 
+                      w-full p-4 lg:p-8">
+            <h3 class="text-3xl lg:text-4xl font-bold text-slate-800 mb-1">
+              American Heroes
+            </h3>
+            <p class="text-slate-800 mb-3 text-lg lg:text-xl">
+              $500 off for military, first responders, healthcare, teachers and students.
+            </p>
+            <button class="rounded-md bg-white text-slate-900 px-5 py-2 shadow-sm text-sm w-md">
+              Learn More
+            </button>
+          </div>
 
-      </article>
+        </article>
+
+      </div>
 
     </div>
-
-  </div>
-</section>
+  </section>
 
 
 
 
 
   <!-- ************************** FSD + Features Section *************************** -->
-<section class="w-full px-4 md:px-6 lg:px-10 py-10">
-  <div class="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-6 mx-auto">
+  <section class="w-full px-4 md:px-6 lg:px-10 py-10">
+    <div class="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-6 mx-auto">
 
-    <!-- LEFT: FSD VIDEO CARD -->
-    <div class="relative w-full h-[420px] sm:h-[500px] md:h-[550px] lg:h-[580px] rounded-xl overflow-hidden">
-      <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
-        <source src="/public/img/video/Homepage-FSD-Tablet.mp4" type="video/mp4">
-      </video>
+      <!-- LEFT: FSD VIDEO CARD -->
+      <div class="relative w-full h-[420px] sm:h-[500px] md:h-[550px] lg:h-[580px] rounded-xl overflow-hidden">
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+          <source src="/public/img/video/Homepage-FSD-Tablet.mp4" type="video/mp4">
+        </video>
 
-      <!-- Pause Icon (optional) -->
-      <button
-        id="videoToggle"
-        class="absolute top-4 right-4 bg-white/30 hover:bg-black/30 transition rounded-md p-3 backdrop-blur-md cursor-pointer">
-        <img id="toggleIcon" src="/public/img/icons/puse.svg" class="w-5 h-5" />
-      </button>
+        <!-- Pause Icon (optional) -->
+        <button
+          id="videoToggle"
+          class="absolute top-4 right-4 bg-white/30 hover:bg-black/30 transition rounded-md p-3 backdrop-blur-md cursor-pointer">
+          <img id="toggleIcon" src="/public/img/icons/puse.svg" class="w-5 h-5" />
+        </button>
 
 
-      <!-- TEXT + BUTTONS -->
-      <div class="absolute left-6 bottom-6 sm:left-8 sm:bottom-8 z-10">
-        <h2 class="text-white text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight">
-          Full Self-Driving (Supervised)
-        </h2>
+        <!-- TEXT + BUTTONS -->
+        <div class="absolute left-6 bottom-6 sm:left-8 sm:bottom-8 z-10">
+          <h2 class="text-white text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight">
+            Full Self-Driving (Supervised)
+          </h2>
 
-        <div class="flex gap-4 mt-4">
-          <button class="bg-[#3E6AE1] text-white px-6 py-2 rounded-md text-sm font-medium">
-            Demo Drive
-          </button>
+          <div class="flex gap-4 mt-4">
+            <button class="bg-[#3E6AE1] text-white px-6 py-2 rounded-md text-sm font-medium">
+              Demo Drive
+            </button>
 
-          <button class="bg-white text-black px-6 py-2 rounded-md text-sm font-medium">
-            View Report
+            <button class="bg-white text-black px-6 py-2 rounded-md text-sm font-medium">
+              View Report
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: FEATURES IMAGE CARD -->
+      <div class="relative w-full h-[420px] sm:h-[500px] md:h-[550px] lg:h-[580px] rounded-xl overflow-hidden">
+        <img 
+          src="/public/img/Homepage-Features-Desktop.avif" 
+          class="absolute inset-0 w-full h-full object-cover" 
+          alt="Tesla trunk open"
+        />
+
+        <!-- TEXT + BUTTON -->
+        <div class="absolute left-6 bottom-6 sm:left-8 sm:bottom-8 z-10">
+          <h2 class="text-white text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight">
+            Features That<br>Come Standard
+          </h2>
+
+          <button class="mt-4 bg-[#3E6AE1] text-white px-6 py-2 rounded-md text-sm font-medium">
+            Discover
           </button>
         </div>
       </div>
+
     </div>
-
-    <!-- RIGHT: FEATURES IMAGE CARD -->
-    <div class="relative w-full h-[420px] sm:h-[500px] md:h-[550px] lg:h-[580px] rounded-xl overflow-hidden">
-      <img 
-        src="/public/img/Homepage-Features-Desktop.avif" 
-        class="absolute inset-0 w-full h-full object-cover" 
-        alt="Tesla trunk open"
-      />
-
-      <!-- TEXT + BUTTON -->
-      <div class="absolute left-6 bottom-6 sm:left-8 sm:bottom-8 z-10">
-        <h2 class="text-white text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight">
-          Features That<br>Come Standard
-        </h2>
-
-        <button class="mt-4 bg-[#3E6AE1] text-white px-6 py-2 rounded-md text-sm font-medium">
-          Discover
-        </button>
-      </div>
-    </div>
-
-  </div>
-</section>
+  </section>
 
 
 
@@ -498,95 +498,95 @@
 <!--  FIND YOUR CHARGE SECTION    -->
 <!-- ============================= -->
 
-<section class="w-full bg-white pt-10 md:px-9 lg:px-9">
-  <!-- MAP WRAPPER -->
-<div class="relative w-full">
-  <div id="map" class="w-full h-[580px] "></div>
+  <section class="w-full bg-white pt-10 md:px-9 lg:px-9">
+    <!-- MAP WRAPPER -->
+  <div class="relative w-full">
+    <div id="map" class="w-full h-[580px] "></div>
 
-  <!-- FIND ME BUTTON -->
-  <button 
-    class="absolute bottom-6 left-6 bg-white shadow-md px-4 py-2 rounded-md flex items-center gap-2 text-sm font-medium"
-    onclick="findMe()"
-  >
-    <img src="./public/img/icons/map-pin.svg" class="w-5 h-5" />
-    Find Me
-  </button>
-</div>
+    <!-- FIND ME BUTTON -->
+    <button 
+      class="absolute bottom-6 left-6 bg-white shadow-md px-4 py-2 rounded-md flex items-center gap-2 text-sm font-medium"
+      onclick="findMe()"
+    >
+      <img src="./public/img/icons/map-pin.svg" class="w-5 h-5" />
+      Find Me
+    </button>
+  </div>
 
-  <!-- TEXT + BUTTONS -->
-<div class="w-full mx-auto mt-10 pb-28 px-6 ">
+    <!-- TEXT + BUTTONS -->
+  <div class="w-full mx-auto mt-10 pb-28 px-6 ">
 
-  <!-- MAIN FLEX (LEFT + RIGHT) -->
-  <div class="flex flex-col lg:flex-row justify-between items-start lg:items-top gap-10">
+    <!-- MAIN FLEX (LEFT + RIGHT) -->
+    <div class="flex flex-col lg:flex-row justify-between items-start lg:items-top gap-10">
 
-    <!-- LEFT SIDE -->
-    <div>
-      <h2 class="lg:text-5xl text-4xl font-semibold">Find Your Charge</h2>
+      <!-- LEFT SIDE -->
+      <div>
+        <h2 class="lg:text-5xl text-4xl font-semibold">Find Your Charge</h2>
 
-      <p class="mt-3 text-gray-600 text-xl">
-        View the network of Tesla Superchargers and Destination Chargers available near you.
-      </p>
+        <p class="mt-3 text-gray-600 text-xl">
+          View the network of Tesla Superchargers and Destination Chargers available near you.
+        </p>
 
-      <!-- BUTTON ROW -->
-      <div class="flex items-center gap-4 mt-6">
-        <a 
-          href="#" 
-          class="px-6 py-3 bg-black text-white rounded-md text-sm font-medium hover:bg-gray-900"
-        >
-          View Network
-        </a>
+        <!-- BUTTON ROW -->
+        <div class="flex items-center gap-4 mt-6">
+          <a 
+            href="#" 
+            class="px-6 py-3 bg-black text-white rounded-md text-sm font-medium hover:bg-gray-900"
+          >
+            View Network
+          </a>
 
-        <a 
-          href="#" 
-          class="px-6 py-3 bg-gray-200 text-gray-800 rounded-md text-sm font-medium hover:bg-gray-300"
-        >
-          Learn More
-        </a>
+          <a 
+            href="#" 
+            class="px-6 py-3 bg-gray-200 text-gray-800 rounded-md text-sm font-medium hover:bg-gray-300"
+          >
+            Learn More
+          </a>
+        </div>
       </div>
+
+    <!-- RIGHT SIDE (COUNTERS) -->
+  <!-- RIGHT SIDE (COUNTERS) -->
+  <div class="flex  md:flex-row items-start md:items-center gap-6 lg:gap-16 mt-10 lg:mt-0">
+
+    <!-- SUPERCHARGERS -->
+    <div class="flex flex-col items-start text-left">
+      <!-- TOP ROW -->
+      <div class="flex items-center gap-2">
+        <span class="lg:text-5xl text-4xl font-semibold">34,938</span>
+        <span class=" w-9 h-9 lg:w-13 lg:h-13 bg-red-600 rounded-full flex items-center justify-center">
+          <img src="./public/img/icons/bolt.svg" class="w-8 h-8 invert" />
+        </span>
+      </div>
+
+      <!-- LABEL LEFT-ALIGNED -->
+      <p class="text-gray-800 text-xl mt-1">Superchargers</p>
     </div>
 
-   <!-- RIGHT SIDE (COUNTERS) -->
-<!-- RIGHT SIDE (COUNTERS) -->
-<div class="flex  md:flex-row items-start md:items-center gap-6 lg:gap-16 mt-10 lg:mt-0">
+    <!-- DESTINATION CHARGERS -->
+    <div class="flex flex-col items-start text-left">
+      <!-- TOP ROW -->
+      <div class="flex items-center gap-2">
+        <span class="lg:text-5xl text-4xl font-semibold">3,107</span>
+        <span class="w-9 h-9 lg:w-13 lg:h-13 bg-gray-400 rounded-full flex items-center justify-center">
+          <img src="./public/img/icons/plug.svg" class="w-8 h-8 invert" />
+        </span>
+      </div>
 
-  <!-- SUPERCHARGERS -->
-  <div class="flex flex-col items-start text-left">
-    <!-- TOP ROW -->
-    <div class="flex items-center gap-2">
-      <span class="lg:text-5xl text-4xl font-semibold">34,938</span>
-      <span class=" w-9 h-9 lg:w-13 lg:h-13 bg-red-600 rounded-full flex items-center justify-center">
-        <img src="./public/img/icons/bolt.svg" class="w-8 h-8 invert" />
-      </span>
+      <!-- LABEL LEFT-ALIGNED -->
+      <p class="text-gray-800 text- lg:text-xl mt-1">Destination Chargers</p>
     </div>
 
-    <!-- LABEL LEFT-ALIGNED -->
-    <p class="text-gray-800 text-xl mt-1">Superchargers</p>
   </div>
 
-  <!-- DESTINATION CHARGERS -->
-  <div class="flex flex-col items-start text-left">
-    <!-- TOP ROW -->
-    <div class="flex items-center gap-2">
-      <span class="lg:text-5xl text-4xl font-semibold">3,107</span>
-      <span class="w-9 h-9 lg:w-13 lg:h-13 bg-gray-400 rounded-full flex items-center justify-center">
-        <img src="./public/img/icons/plug.svg" class="w-8 h-8 invert" />
-      </span>
+
+
     </div>
-
-    <!-- LABEL LEFT-ALIGNED -->
-    <p class="text-gray-800 text- lg:text-xl mt-1">Destination Chargers</p>
   </div>
 
-</div>
 
 
-
-  </div>
-</div>
-
-
-
-</section>
+  </section>
 
 
 
@@ -603,273 +603,268 @@
 
 
   <!-- ************************** Solar Slider *************************** -->
-<section class="w-full overflow-hidden py-12 bg-white">
-  <div class="w-full">
-    <div class="relative overflow-hidden">
+  <section class="w-full overflow-hidden py-12 bg-white">
+    <div class="w-full">
+      <div class="relative overflow-hidden">
 
-      <!-- Cards Wrapper -->
-      <div id="solar-track" class="flex transition-transform duration-500 ease-out">
+        <!-- Cards Wrapper -->
+        <div id="solar-track" class="flex transition-transform duration-500 ease-out">
 
-        <!-- Card 1 -->
-        <div class="solar-card flex-shrink-0 w-full sm:w-[60%] lg:w-[45%] px-4">
-          <div class="relative rounded-xl overflow-hidden shadow-md h-[550px]">
-            <img src="./public/img/Solar Panels/Homepage-Card-Solar-Panels-Desktop-v2.avif" 
-                 class="w-full h-full object-cover" alt="Solar Panels">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent pointer-events-none"></div>
-            <div class="absolute inset-0 flex items-end">
-              <div class="p-6 md:p-8 lg:p-10 max-w-[60%] text-white">
-                <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold">Solar Panels</h3>
-                <p class="font-medium text-xl mt-1">Power Your Home and Reduce Your Electricity Bill</p>
-                <div class="mt-8 flex gap-4 cta-row">
-                  <button class="overlay-btn-primary">Order Now</button>
-                  <button class="overlay-btn-secondary">Learn More</button>
+          <!-- Card 1 -->
+          <div class="solar-card flex-shrink-0 w-full sm:w-[60%] lg:w-[45%] px-4">
+            <div class="relative rounded-xl overflow-hidden shadow-md h-[550px]">
+              <img src="./public/img/Solar Panels/Homepage-Card-Solar-Panels-Desktop-v2.avif" 
+                  class="w-full h-full object-cover" alt="Solar Panels">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent pointer-events-none"></div>
+              <div class="absolute inset-0 flex items-end">
+                <div class="p-6 md:p-8 lg:p-10 max-w-[60%] text-white">
+                  <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold">Solar Panels</h3>
+                  <p class="font-medium text-xl mt-1">Power Your Home and Reduce Your Electricity Bill</p>
+                  <div class="mt-8 flex gap-4 cta-row">
+                    <button class="overlay-btn-primary">Order Now</button>
+                    <button class="overlay-btn-secondary">Learn More</button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- Card 2 -->
+          <div class="solar-card flex-shrink-0 w-full sm:w-[60%] lg:w-[45%] px-4">
+            <div class="relative rounded-xl overflow-hidden shadow-md h-[550px]">
+              <img src="./public/img/Solar Panels/Homepage-Card-Powerwall-Desktop.avif" 
+                  class="w-full h-full object-cover" alt="Powerwall">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent pointer-events-none"></div>
+              <div class="absolute inset-0 flex items-end">
+                <div class="p-6 md:p-8 lg:p-10 max-w-[60%] text-white">
+                  <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold">Powerwall</h3>
+                  <p class="font-medium text-xl mt-1 underline">Keep Your Lights On During Outages</p>
+                  <div class="mt-8 flex gap-4 cta-row">
+                    <button class="overlay-btn-primary">Order Now</button>
+                    <button class="overlay-btn-secondary">Learn More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="solar-card flex-shrink-0 w-full sm:w-[60%] lg:w-[45%] px-4">
+            <div class="relative rounded-xl overflow-hidden shadow-md h-[550px]">
+              <img src="./public/img/Solar Panels/Homepage-Card-Megapack-Desktop-v2.avif" 
+                  class="w-full h-full object-cover" alt="Megapack">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent pointer-events-none"></div>
+              <div class="absolute inset-0 flex items-end">
+                <div class="p-6 md:p-8 lg:p-10 max-w-[60%] text-white">
+                  <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold">Megapack</h3>
+                  <p class="font-medium text-xl mt-1 underline">Massive Batteries for Massive Energy Support</p>
+                  <div class="mt-8 flex gap-4 cta-row">
+                    <button class="overlay-btn-primary">Order Now</button>
+                    <button class="overlay-btn-secondary">Learn More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="solar-card flex-shrink-0 w-full sm:w-[60%] lg:w-[45%] px-4">
+            <div class="relative rounded-xl overflow-hidden shadow-md h-[550px]">
+              <img src="./public/img/Solar Panels/Homepage-Card-Solar-Roof-Desktop.avif" 
+                  class="w-full h-full object-cover" alt="Solar Roof">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent pointer-events-none"></div>
+              <div class="absolute inset-0 flex items-end">
+                <div class="p-6 md:p-8 lg:p-10 max-w-[60%] text-white">
+                  <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold">Solar Roof</h3>
+                  <p class="font-medium mt-1">Generate Clean Energy With Your Roof</p>
+                  <div class="mt-8 flex gap-4 cta-row">
+                    <button class="overlay-btn-primary">Order Now</button>
+                    <button class="overlay-btn-secondary">Learn More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
-        <!-- Card 2 -->
-        <div class="solar-card flex-shrink-0 w-full sm:w-[60%] lg:w-[45%] px-4">
-          <div class="relative rounded-xl overflow-hidden shadow-md h-[550px]">
-            <img src="./public/img/Solar Panels/Homepage-Card-Powerwall-Desktop.avif" 
-                 class="w-full h-full object-cover" alt="Powerwall">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent pointer-events-none"></div>
-            <div class="absolute inset-0 flex items-end">
-              <div class="p-6 md:p-8 lg:p-10 max-w-[60%] text-white">
-                <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold">Powerwall</h3>
-                <p class="font-medium text-xl mt-1 underline">Keep Your Lights On During Outages</p>
-                <div class="mt-8 flex gap-4 cta-row">
-                  <button class="overlay-btn-primary">Order Now</button>
-                  <button class="overlay-btn-secondary">Learn More</button>
-                </div>
-              </div>
-            </div>
-          </div>
+        <!-- Controls -->
+        <button id="solar-prev" class="absolute left-12 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white shadow-md w-11 h-11 flex items-center justify-center rounded-md">
+          <img src="./public/img/icons/arrow-left.svg" class="w-6 h-6">
+          <span class="sr-only">Previous</span>
+        </button>
+
+        <button id="solar-next" class="absolute right-12 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white shadow-md w-11 h-11 flex items-center justify-center rounded-md">
+          <img src="./public/img/icons/arrow-right.svg" class="w-6 h-6">
+          <span class="sr-only">Next</span>
+        </button>
+
+        <!-- Dots -->
+        <div class="flex justify-center mt-6 space-x-3">
+          <button class="solar-dot w-3 h-3 rounded-full bg-gray-400"></button>
+          <button class="solar-dot w-3 h-3 rounded-full bg-gray-400"></button>
+          <button class="solar-dot w-3 h-3 rounded-full bg-gray-400"></button>
+          <button class="solar-dot w-3 h-3 rounded-full bg-gray-400"></button>
         </div>
 
-        <!-- Card 3 -->
-        <div class="solar-card flex-shrink-0 w-full sm:w-[60%] lg:w-[45%] px-4">
-          <div class="relative rounded-xl overflow-hidden shadow-md h-[550px]">
-            <img src="./public/img/Solar Panels/Homepage-Card-Megapack-Desktop-v2.avif" 
-                 class="w-full h-full object-cover" alt="Megapack">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent pointer-events-none"></div>
-            <div class="absolute inset-0 flex items-end">
-              <div class="p-6 md:p-8 lg:p-10 max-w-[60%] text-white">
-                <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold">Megapack</h3>
-                <p class="font-medium text-xl mt-1 underline">Massive Batteries for Massive Energy Support</p>
-                <div class="mt-8 flex gap-4 cta-row">
-                  <button class="overlay-btn-primary">Order Now</button>
-                  <button class="overlay-btn-secondary">Learn More</button>
-                </div>
-              </div>
-            </div>
-          </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- ********** Footer Section ********** -->
+  <footer class="bg-black text-white py-12 px-6 md:px-16">
+    <div class="max-w-7xl mx-auto">
+
+      <!-- Footer Links Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
+
+        <!-- Column 1 -->
+        <div>
+          <h4 class="font-semibold mb-4 text-sm uppercase tracking-wide">Vehicles</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:underline">Model S</a></li>
+            <li><a href="#" class="hover:underline">Model 3</a></li>
+            <li><a href="#" class="hover:underline">Model X</a></li>
+            <li><a href="#" class="hover:underline">Model Y</a></li>
+            <li><a href="#" class="hover:underline">Cybertruck</a></li>
+          </ul>
         </div>
 
-        <!-- Card 4 -->
-        <div class="solar-card flex-shrink-0 w-full sm:w-[60%] lg:w-[45%] px-4">
-          <div class="relative rounded-xl overflow-hidden shadow-md h-[550px]">
-            <img src="./public/img/Solar Panels/Homepage-Card-Solar-Roof-Desktop.avif" 
-                 class="w-full h-full object-cover" alt="Solar Roof">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent pointer-events-none"></div>
-            <div class="absolute inset-0 flex items-end">
-              <div class="p-6 md:p-8 lg:p-10 max-w-[60%] text-white">
-                <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold">Solar Roof</h3>
-                <p class="font-medium mt-1">Generate Clean Energy With Your Roof</p>
-                <div class="mt-8 flex gap-4 cta-row">
-                  <button class="overlay-btn-primary">Order Now</button>
-                  <button class="overlay-btn-secondary">Learn More</button>
-                </div>
-              </div>
-            </div>
-          </div>
+        <!-- Column 2 -->
+        <div>
+          <h4 class="font-semibold mb-4 text-sm uppercase tracking-wide">Energy</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:underline">Solar Roof</a></li>
+            <li><a href="#" class="hover:underline">Solar Panels</a></li>
+            <li><a href="#" class="hover:underline">Powerwall</a></li>
+            <li><a href="#" class="hover:underline">Megapack</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div>
+          <h4 class="font-semibold mb-4 text-sm uppercase tracking-wide">Support</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:underline">Contact</a></li>
+            <li><a href="#" class="hover:underline">Charging</a></li>
+            <li><a href="#" class="hover:underline">Warranty</a></li>
+            <li><a href="#" class="hover:underline">Order Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4 -->
+        <div>
+          <h4 class="font-semibold mb-4 text-sm uppercase tracking-wide">Company</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:underline">About</a></li>
+            <li><a href="#" class="hover:underline">Careers</a></li>
+            <li><a href="#" class="hover:underline">Investors</a></li>
+            <li><a href="#" class="hover:underline">News</a></li>
+          </ul>
         </div>
 
       </div>
 
-      <!-- Controls -->
-      <button id="solar-prev" class="absolute left-12 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white shadow-md w-11 h-11 flex items-center justify-center rounded-md">
-        <img src="./public/img/icons/arrow-left.svg" class="w-6 h-6">
-        <span class="sr-only">Previous</span>
+      <!-- Bottom Footer -->
+      <div class="text-center text-xs text-gray-400 space-y-2">
+        <p>© 2025 Abyu Ezezew Tesla-Clone Project. All Rights Reserved.</p>
+
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="#" class="hover:text-white">Privacy & Legal</a>
+          <a href="#" class="hover:text-white">Vehicle Recalls</a>
+          <a href="#" class="hover:text-white">Contact</a>
+          <a href="#" class="hover:text-white">News</a>
+          <a href="#" class="hover:text-white">Get Updates</a>
+          <a href="#" class="hover:text-white">Locations</a>
+        </div>
+      </div>
+
+    </div>
+
+    
+  </footer>
+
+
+  <!-- ********** Fixed Bottom "Ask a Question" Field ********** -->
+  <section class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 z-50">
+    <div class="max-w-3xl mx-auto flex items-center justify-between py-3 px-4 gap-3 shadow-gray-200 shadow-md">
+
+      <!-- MOBILE: small message icon -->
+      <button
+        id="mobileMessageBtn"
+        class="md:hidden flex items-center justify-center w-10 h-10 bg-gray-200 rounded-md"
+      >
+        <img src="./public/img/icons/message.svg" class="w-5 h-5" />
       </button>
 
-      <button id="solar-next" class="absolute right-12 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white shadow-md w-11 h-11 flex items-center justify-center rounded-md">
-        <img src="./public/img/icons/arrow-right.svg" class="w-6 h-6">
-        <span class="sr-only">Next</span>
-      </button>
+      <!-- DESKTOP: full ask question field -->
+      <div class="hidden md:block relative flex-1">
+        <input
+          id="questionInput"
+          type="text"
+          class="w-full border bg-gray-200 border-gray-300 rounded-md py-2.5 pl-36 pr-12 text-sm font-bold transition-all duration-200 placeholder-gray-400"
+          placeholder="Loading suggestions..."
+        />
 
-      <!-- Dots -->
-      <div class="flex justify-center mt-6 space-x-3">
-        <button class="solar-dot w-3 h-3 rounded-full bg-gray-400"></button>
-        <button class="solar-dot w-3 h-3 rounded-full bg-gray-400"></button>
-        <button class="solar-dot w-3 h-3 rounded-full bg-gray-400"></button>
-        <button class="solar-dot w-3 h-3 rounded-full bg-gray-400"></button>
+        <span
+          id="staticLabel"
+          class="absolute left-3 top-1/2 -translate-y-1/2 flex items-center gap-2 text-gray-600 font-medium pointer-events-none"
+        >
+          <img src="./public/img/icons/message.svg" class="w-5 h-5" alt="">
+          <span>Ask Question</span>
+        </span>
+
+        <span
+          id="arrowBox"
+          class="absolute right-3 top-1/2 -translate-y-1/2 bg-gray-100 p-1 rounded-md transition"
+        >
+          <img id="arrowIcon" src="./public/img/icons/arrow-up.svg" class="w-5 h-5" alt="">
+        </span>
       </div>
 
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- ********** Footer Section ********** -->
-<footer class="bg-black text-white py-12 px-6 md:px-16">
-  <div class="max-w-7xl mx-auto">
-
-    <!-- Footer Links Grid -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
-
-      <!-- Column 1 -->
-      <div>
-        <h4 class="font-semibold mb-4 text-sm uppercase tracking-wide">Vehicles</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a href="#" class="hover:underline">Model S</a></li>
-          <li><a href="#" class="hover:underline">Model 3</a></li>
-          <li><a href="#" class="hover:underline">Model X</a></li>
-          <li><a href="#" class="hover:underline">Model Y</a></li>
-          <li><a href="#" class="hover:underline">Cybertruck</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 2 -->
-      <div>
-        <h4 class="font-semibold mb-4 text-sm uppercase tracking-wide">Energy</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a href="#" class="hover:underline">Solar Roof</a></li>
-          <li><a href="#" class="hover:underline">Solar Panels</a></li>
-          <li><a href="#" class="hover:underline">Powerwall</a></li>
-          <li><a href="#" class="hover:underline">Megapack</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 3 -->
-      <div>
-        <h4 class="font-semibold mb-4 text-sm uppercase tracking-wide">Support</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a href="#" class="hover:underline">Contact</a></li>
-          <li><a href="#" class="hover:underline">Charging</a></li>
-          <li><a href="#" class="hover:underline">Warranty</a></li>
-          <li><a href="#" class="hover:underline">Order Support</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 4 -->
-      <div>
-        <h4 class="font-semibold mb-4 text-sm uppercase tracking-wide">Company</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a href="#" class="hover:underline">About</a></li>
-          <li><a href="#" class="hover:underline">Careers</a></li>
-          <li><a href="#" class="hover:underline">Investors</a></li>
-          <li><a href="#" class="hover:underline">News</a></li>
-        </ul>
-      </div>
-
-    </div>
-
-    <!-- Bottom Footer -->
-    <div class="text-center text-xs text-gray-400 space-y-2">
-      <p>© 2025 Abyu Ezezew Tesla-Clone Project. All Rights Reserved.</p>
-
-      <div class="flex flex-wrap justify-center gap-4">
-        <a href="#" class="hover:text-white">Privacy & Legal</a>
-        <a href="#" class="hover:text-white">Vehicle Recalls</a>
-        <a href="#" class="hover:text-white">Contact</a>
-        <a href="#" class="hover:text-white">News</a>
-        <a href="#" class="hover:text-white">Get Updates</a>
-        <a href="#" class="hover:text-white">Locations</a>
-      </div>
-    </div>
-
-  </div>
-
-  
-</footer>
-
-
-
-
-
-
-
-<!-- ********** Fixed Bottom "Ask a Question" Field ********** -->
-<section class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 z-50">
-  <div class="max-w-3xl mx-auto flex items-center justify-between py-3 px-4 gap-3 shadow-gray-200 shadow-md">
-
-    <!-- MOBILE: small message icon -->
-    <button
-      id="mobileMessageBtn"
-      class="md:hidden flex items-center justify-center w-10 h-10 bg-gray-200 rounded-md"
-    >
-      <img src="./public/img/icons/message.svg" class="w-5 h-5" />
-    </button>
-
-    <!-- DESKTOP: full ask question field -->
-    <div class="hidden md:block relative flex-1">
-      <input
-        id="questionInput"
-        type="text"
-        class="w-full border bg-gray-200 border-gray-300 rounded-md py-2.5 pl-36 pr-12 text-sm font-bold transition-all duration-200 placeholder-gray-400"
-        placeholder="Loading suggestions..."
-      />
-
-      <span
-        id="staticLabel"
-        class="absolute left-3 top-1/2 -translate-y-1/2 flex items-center gap-2 text-gray-600 font-medium pointer-events-none"
+        <a
+        href="#"
+        class="
+          flex items-center gap-2 
+          bg-gray-200 px-4 py-2.5 rounded-md cursor-pointer 
+          whitespace-nowrap text-sm font-medium
+          
+          flex-1 md:flex-none        
+          justify-center md:justify-start
+        "
       >
-        <img src="./public/img/icons/message.svg" class="w-5 h-5" alt="">
-        <span>Ask Question</span>
-      </span>
+        <img 
+          src="./public/img/images (1).png"
+          alt="Steering Wheel Icon"
+          class="w-5 h-5 object-contain"
+        />
+        <span>Schedule a Drive Today</span>
+      </a>
 
-      <span
-        id="arrowBox"
-        class="absolute right-3 top-1/2 -translate-y-1/2 bg-gray-100 p-1 rounded-md transition"
-      >
-        <img id="arrowIcon" src="./public/img/icons/arrow-up.svg" class="w-5 h-5" alt="">
-      </span>
+
     </div>
-
-      <a
-      href="#"
-      class="
-        flex items-center gap-2 
-        bg-gray-200 px-4 py-2.5 rounded-md cursor-pointer 
-        whitespace-nowrap text-sm font-medium
-        
-        flex-1 md:flex-none        
-        justify-center md:justify-start
-      "
-    >
-      <img 
-        src="./public/img/images (1).png"
-        alt="Steering Wheel Icon"
-        class="w-5 h-5 object-contain"
-      />
-      <span>Schedule a Drive Today</span>
-    </a>
-
-
-  </div>
-</section>
+  </section>
 
 
 
@@ -887,12 +882,11 @@
 
 
 
-<script
-  src="https://maps.googleapis.com/maps/api/js?key=%VITE_GOOGLE_MAPS_KEY%&callback=initMap"
-  async
-  defer
-></script>
-
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=%VITE_GOOGLE_MAPS_KEY%&callback=initMap"
+    async
+    defer
+  ></script>
 
   <script type="module" src="/src/main.js"></script>
 </body>
