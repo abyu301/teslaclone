@@ -357,7 +357,6 @@ questionInput.addEventListener("input", () => {
 
 
 
-
 // ===========================
 // GOOGLE MAPS INTEGRATION
 // ===========================
@@ -368,14 +367,9 @@ function loadGoogleMaps() {
   const script = document.createElement("script");
   script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
   script.async = true;
-  window.initMap = initMap;
   document.head.appendChild(script);
 }
 
-loadGoogleMaps();
-
-
-  
 let map;
 
 function initMap() {
@@ -384,26 +378,35 @@ function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     zoom: 10,
     center: defaultPos,
-    mapId: "DEMO_MAP_ID"
+    mapId: "DEMO_MAP_ID",
   });
 }
 
+// ⬇️ MAKE initMap GLOBAL **AFTER** it's defined
+window.initMap = initMap;
+
+// Load Maps
+loadGoogleMaps();
+
+
+// ===========================
+// FIND MY LOCATION
+// ===========================
 function findMe() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition((pos) => {
       const userPos = {
         lat: pos.coords.latitude,
-        lng: pos.coords.longitude
+        lng: pos.coords.longitude,
       };
+
       map.setCenter(userPos);
       map.setZoom(13);
 
       new google.maps.Marker({
         position: userPos,
-        map: map
+        map: map,
       });
     });
   }
 }
-
-
