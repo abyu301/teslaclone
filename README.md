@@ -2,7 +2,7 @@
 
 # 🚗 Tesla Homepage Clone – Vite + Tailwind CSS
 
-![Banner](./public/screenshots/banner.png)
+![Banner](./public/img/README%20screenshots/Screenshot%202025-12-08%20222505.png)
 *A modern, pixel-perfect rebuild of Tesla.com’s homepage built using Vite, Tailwind CSS, JavaScript, and AI-assisted development.*
 
 ---
@@ -25,21 +25,22 @@
 ## 🌐 Live Demo
 
 **👉 [https://your-tesla-clone.vercel.app](https://your-tesla-clone.vercel.app)**
-*(Replace with your real URL)*
 
 ---
 
 # 📸 Preview Screenshots
 
-*Add your screenshots later — these are placeholders.*
+### 🖥️ Desktop View homepage
+![Desktop View](assets/screenshots/homepage-desktop.png)
 
-```
-/public/screenshots/homepage.png
-/public/screenshots/mega-menu.png
-/public/screenshots/mobile-nav.png
-```
+### mega-menu
+![Mega Menu](assets/screenshots/homepage-desktop.png)
 
----
+### 📱 Mobile View
+![Mobile View](assets/screenshots/homepage-mobile.png)
+
+![mobile-nav](assets/screenshots/homepage-mobile.png)
+
 
 # 📦 Overview
 
