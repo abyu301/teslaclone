@@ -1,4 +1,9 @@
 
+## 🌐 Live Demo
+
+**👉 [https://tesla-clone-q144wgec8-abyus-projects.vercel.app/](https://tesla-clone-q144wgec8-abyus-projects.vercel.app/)**
+
+---
 
 # 🚗 Tesla Homepage Clone – Vite + Tailwind CSS
 
@@ -24,7 +29,7 @@
 
 ## 🌐 Live Demo
 
-**👉 [https://your-tesla-clone.vercel.app](https://your-tesla-clone.vercel.app)**
+**👉 [https://tesla-clone-q144wgec8-abyus-projects.vercel.app/](https://tesla-clone-q144wgec8-abyus-projects.vercel.app/)**
 
 ---
 
@@ -237,5 +242,11 @@ npm run build
 
 This project is **open-source** and for **educational/portfolio use only**.
 Not affiliated with Tesla Motors.
+
+---
+
+## 🌐 Live Demo
+
+**👉 [https://tesla-clone-q144wgec8-abyus-projects.vercel.app/](https://tesla-clone-q144wgec8-abyus-projects.vercel.app/)**
 
 ---
