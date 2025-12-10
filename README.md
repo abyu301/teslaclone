@@ -158,22 +158,22 @@ Each challenge improved my understanding of real-world UI engineering.
 # 📂 Project Structure
 
 ```
-tesla-clone/
+TESLACLONE/
 │
 ├── public/
-│   ├── images/          → Car images, thumbnails
-│   ├── screenshots/     → README screenshots
-│   └── favicon.ico
+│   ├── images/  hero,icons,mega-cars,promo-pic,   
+                 README screenshots,showcase,Solar Panels,video,logo+2 images  
+│   
 │
 ├── src/
-│   ├── js/
-│   │   └── menu.js       → Nav + dropdown logic
-│   ├── styles/
-│   │   └── style.css     → Tailwind import
-│   └── index.html        → Main layout
+│   ├── main.js 
+│   │         → Nav + dropdown logic
+│   ├── style.css
+│   │          → Tailwind import
+│   └──        → Main layout
 │
 ├── package.json
-├── tailwind.config.js
+├── index.html 
 ├── vite.config.js
 └── README.md
 ```
