@@ -1,7 +1,7 @@
 
 ## 🌐 Live Demo
 
-**👉 [https://tesla-clone-q144wgec8-abyus-projects.vercel.app/](https://tesla-clone-q144wgec8-abyus-projects.vercel.app/)**
+**👉 [https://tesla-clone-two-lilac.vercel.app/](https://tesla-clone-two-lilac.vercel.app/)**
 
 ---
 
@@ -29,7 +29,7 @@
 
 ## 🌐 Live Demo
 
-**👉 [https://tesla-clone-q144wgec8-abyus-projects.vercel.app/](https://tesla-clone-q144wgec8-abyus-projects.vercel.app/)**
+**👉 [https://tesla-clone-two-lilac.vercel.app/](https://tesla-clone-two-lilac.vercel.app/)**
 
 ---
 
@@ -247,6 +247,6 @@ Not affiliated with Tesla Motors.
 
 ## 🌐 Live Demo
 
-**👉 [https://tesla-clone-q144wgec8-abyus-projects.vercel.app/](https://tesla-clone-q144wgec8-abyus-projects.vercel.app/)**
+**👉 [https://tesla-clone-two-lilac.vercel.app//](https://tesla-clone-two-lilac.vercel.app/)**
 
 ---
