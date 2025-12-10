@@ -31,20 +31,20 @@
 # 📸 Preview Screenshots
 
 ### 🖥️ Desktop View homepage
-![Desktop View](assets/screenshots/homepage-desktop.png)
+![Desktop View](./public/img/README%20screenshots/Screenshot%202025-12-09%20212244.png)
 
 ### mega-menu
-![Mega Menu](assets/screenshots/homepage-desktop.png)
+![Mega Menu](./public/img/README%20screenshots/Screenshot%202025-12-09%20212401.png)
 
 ### 📱 Mobile View
-![Mobile View](assets/screenshots/homepage-mobile.png)
+![Mobile View](./public/img/README%20screenshots/Screenshot%202025-12-09%20212441.png)
 
-![mobile-nav](assets/screenshots/homepage-mobile.png)
+![mobile-nav](./public/img/README%20screenshots/Screenshot%202025-12-09%20212519.png)
 
 
 # 📦 Overview
 
-This project is a **full Tesla.com homepage recreation**, built purely for educational and portfolio purposes.
+This project is a **full Tesla.com homepage recreation**, I built purely for educational and portfolio purposes.
 The goal: rebuild Tesla’s clean modern UI using **Tailwind CSS**, **Vite**, and **modular JavaScript**, while mastering responsive design and complex UI patterns like mega menus.
 
 AI tools (ChatGPT + GitHub Copilot) played a major role in speeding up development, debugging, structuring files, and helping me learn advanced concepts quickly.
