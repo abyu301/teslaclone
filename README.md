@@ -1,7 +1,7 @@
 
 ## 🌐 Live Demo
 
-**👉 [https://tesla-clone-two-lilac.vercel.app/](https://tesla-clone-two-lilac.vercel.app/)**
+**👉 [https://teslaclone-sand.vercel.app/](https://teslaclone-sand.vercel.app/)**
 
 ---
 
@@ -29,7 +29,7 @@
 
 ## 🌐 Live Demo
 
-**👉 [https://tesla-clone-two-lilac.vercel.app/](https://tesla-clone-two-lilac.vercel.app/)**
+**👉 [https://teslaclone-sand.vercel.app/](https://teslaclone-sand.vercel.app/)**
 
 ---
 
@@ -190,8 +190,8 @@ TESLACLONE/
 ### 1️⃣ Clone the project
 
 ```bash
-git clone https://github.com/abyu301/tesla-clone.git
-cd tesla-clone
+git clone https://github.com/abyu301/teslaclone.git
+cd teslaclone
 ```
 
 ### 2️⃣ Install dependencies
@@ -247,6 +247,6 @@ Not affiliated with Tesla Motors.
 
 ## 🌐 Live Demo
 
-**👉 [https://tesla-clone-two-lilac.vercel.app//](https://tesla-clone-two-lilac.vercel.app/)**
+**👉 [https://teslaclone-sand.vercel.app/](https://teslaclone-sand.vercel.app/)**
 
 ---
